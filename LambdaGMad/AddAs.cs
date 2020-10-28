@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     public partial class AddAs : Form
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpGMad", "SharpGMad\SharpGMad.csproj", "{D3953BB9-01D2-43BA-8457-1E4492200EA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaGMad", "LambdaGMad\LambdaGMad.csproj", "{D3953BB9-01D2-43BA-8457-1E4492200EA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

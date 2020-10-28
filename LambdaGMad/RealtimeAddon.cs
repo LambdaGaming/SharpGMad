@@ -4,7 +4,7 @@ using System.Linq;
 using System.IO;
 using System.Text;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Represents a watcher declaration for an exported file.

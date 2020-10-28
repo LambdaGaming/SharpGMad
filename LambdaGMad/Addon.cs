@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Represents an error with files checking against ignore list.
@@ -534,7 +534,7 @@ namespace SharpGMad
 
             string tempname = System.IO.Path.GetFileNameWithoutExtension(tempfile);
 
-            return System.IO.Path.GetTempPath() + tempname + "_sharpgmad_" + System.IO.Path.GetFileName(path) + ".tmp";
+            return System.IO.Path.GetTempPath() + tempname + "_LambdaGMad_" + System.IO.Path.GetFileName(path) + ".tmp";
         }
 
         /// <summary>
@@ -587,7 +587,7 @@ namespace SharpGMad
         public static void DisposeExternals()
         {
             foreach (string file in Directory.GetFiles(System.IO.Path.GetTempPath(),
-                "tmp*_sharpgmad_*.tmp*", SearchOption.TopDirectoryOnly))
+                "tmp*_LambdaGMad_*.tmp*", SearchOption.TopDirectoryOnly))
             {
                 try
                 {

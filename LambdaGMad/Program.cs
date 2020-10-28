@@ -4,10 +4,10 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
-    /// Contains basic methods for SharpGMad, like the entry point.
+    /// Contains basic methods for LambdaGMad, like the entry point.
     /// </summary>
     class Program
     {

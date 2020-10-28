@@ -113,7 +113,7 @@ namespace System.IO
 }
 
 #if WINDOWS
-namespace SharpGMad
+namespace LambdaGMad
 {
     static class FileAssocation
     {

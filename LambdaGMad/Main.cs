@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     partial class Main : Form
     {
@@ -67,7 +67,7 @@ namespace SharpGMad
         private void InitializeIcons()
         {
             // Form icon itself
-            this.Icon = global::SharpGMad.Properties.Resources.gma_ico;
+            this.Icon = global::LambdaGMad.Properties.Resources.gma_ico;
 
             // Large icons
             imgIconsLarge = new ImageList();
@@ -75,15 +75,15 @@ namespace SharpGMad
             imgIconsLarge.TransparentColor = Color.Transparent;
             imgIconsLarge.ImageSize = new Size(32, 32);
 
-            imgIconsLarge.Images.Add("gma", global::SharpGMad.Properties.Resources.gma_s);
-            imgIconsLarge.Images.Add("file", global::SharpGMad.Properties.Resources.file);
-            imgIconsLarge.Images.Add("exported", global::SharpGMad.Properties.Resources.exported);
-            imgIconsLarge.Images.Add("pullable", global::SharpGMad.Properties.Resources.pullable);
-            imgIconsLarge.Images.Add("whitelistfailure", global::SharpGMad.Properties.Resources.whitelistfailure);
-            imgIconsLarge.Images.Add("folder", global::SharpGMad.Properties.Resources.folder);
-            imgIconsLarge.Images.Add("emptyfolder", global::SharpGMad.Properties.Resources.emptyfolder);
-            imgIconsLarge.Images.Add("parentfolder", global::SharpGMad.Properties.Resources.parentfolder);
-            imgIconsLarge.Images.Add("parentgma", global::SharpGMad.Properties.Resources.parentgma);
+            imgIconsLarge.Images.Add("gma", global::LambdaGMad.Properties.Resources.gma_s);
+            imgIconsLarge.Images.Add("file", global::LambdaGMad.Properties.Resources.file);
+            imgIconsLarge.Images.Add("exported", global::LambdaGMad.Properties.Resources.exported);
+            imgIconsLarge.Images.Add("pullable", global::LambdaGMad.Properties.Resources.pullable);
+            imgIconsLarge.Images.Add("whitelistfailure", global::LambdaGMad.Properties.Resources.whitelistfailure);
+            imgIconsLarge.Images.Add("folder", global::LambdaGMad.Properties.Resources.folder);
+            imgIconsLarge.Images.Add("emptyfolder", global::LambdaGMad.Properties.Resources.emptyfolder);
+            imgIconsLarge.Images.Add("parentfolder", global::LambdaGMad.Properties.Resources.parentfolder);
+            imgIconsLarge.Images.Add("parentgma", global::LambdaGMad.Properties.Resources.parentgma);
 
             // Small icons
             imgIconsSmall = new ImageList();
@@ -91,15 +91,15 @@ namespace SharpGMad
             imgIconsSmall.TransparentColor = Color.Transparent;
             imgIconsSmall.ImageSize = new Size(16, 16);
 
-            imgIconsSmall.Images.Add("gma", global::SharpGMad.Properties.Resources.gma_s);
-            imgIconsSmall.Images.Add("file", global::SharpGMad.Properties.Resources.file_s);
-            imgIconsSmall.Images.Add("exported", global::SharpGMad.Properties.Resources.exported_s);
-            imgIconsSmall.Images.Add("pullable", global::SharpGMad.Properties.Resources.pullable_s);
-            imgIconsSmall.Images.Add("whitelistfailure", global::SharpGMad.Properties.Resources.whitelistfailure_s);
-            imgIconsSmall.Images.Add("folder", global::SharpGMad.Properties.Resources.folder_s);
-            imgIconsSmall.Images.Add("emptyfolder", global::SharpGMad.Properties.Resources.emptyfolder_s);
-            imgIconsSmall.Images.Add("parentfolder", global::SharpGMad.Properties.Resources.parentfolder_s);
-            imgIconsSmall.Images.Add("parentgma", global::SharpGMad.Properties.Resources.parentgma_s);
+            imgIconsSmall.Images.Add("gma", global::LambdaGMad.Properties.Resources.gma_s);
+            imgIconsSmall.Images.Add("file", global::LambdaGMad.Properties.Resources.file_s);
+            imgIconsSmall.Images.Add("exported", global::LambdaGMad.Properties.Resources.exported_s);
+            imgIconsSmall.Images.Add("pullable", global::LambdaGMad.Properties.Resources.pullable_s);
+            imgIconsSmall.Images.Add("whitelistfailure", global::LambdaGMad.Properties.Resources.whitelistfailure_s);
+            imgIconsSmall.Images.Add("folder", global::LambdaGMad.Properties.Resources.folder_s);
+            imgIconsSmall.Images.Add("emptyfolder", global::LambdaGMad.Properties.Resources.emptyfolder_s);
+            imgIconsSmall.Images.Add("parentfolder", global::LambdaGMad.Properties.Resources.parentfolder_s);
+            imgIconsSmall.Images.Add("parentgma", global::LambdaGMad.Properties.Resources.parentgma_s);
         }
 
         private void tsbOpenAddon_Click(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace SharpGMad
                 if (this.Status == "Restrictions disabled by user's request.") // Remove this line from saved status as its expired.
                     this.Status = "Ready to work. :)";
                 UpdateStatus(this.Status);
-                this.Text = "SharpGMad " + Program.PrettyVersion;
+                this.Text = "LambdaGMad " + Program.PrettyVersion;
                 tsbAddFile.Enabled = !Whitelist.Override;
                 tsbUpdateMetadata.Enabled = !Whitelist.Override;
             }
@@ -179,7 +179,7 @@ namespace SharpGMad
                 {
                     DialogResult ovrride = MessageBox.Show("This addon is against the GMA whitelist rules defined by garry!\n" +
                         e.Message + "\n\nFor datamining purposes, it is still possible to open this addon, HOWEVER " +
-                        "opening this addon is an illegal operation and SharpGMad will prevent further modifications.\n\n" +
+                        "opening this addon is an illegal operation and LambdaGMad will prevent further modifications.\n\n" +
                         "Do you want to enable forced opening of this addon by overriding the whitelist?",
                         "Addon is corrupted", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -192,7 +192,7 @@ namespace SharpGMad
                     {
                         Whitelist.Override = true;
                         tsbCreateAddon.Enabled = !Whitelist.Override;
-                        this.Text = "! - SharpGMad " + Program.PrettyVersion;
+                        this.Text = "! - LambdaGMad " + Program.PrettyVersion;
                         UpdateStatus("Restrictions disabled by user's request.");
 
                         shouldOverrideReload = true;
@@ -257,7 +257,7 @@ namespace SharpGMad
             {
                 this.Text = Path.GetFileName(AddonHandle.AddonPath) + (Whitelist.Override ? "!" : null) +
                     (AddonHandle.CanWrite ? null : " (read-only)") +
-                    (AddonHandle.Modified ? "*" : null) + " - SharpGMad " +
+                    (AddonHandle.Modified ? "*" : null) + " - LambdaGMad " +
                     Program.PrettyVersion;
 
                 tsbSaveAddon.Enabled = AddonHandle.CanWrite && AddonHandle.Modified && (!Whitelist.Override);
@@ -569,11 +569,11 @@ namespace SharpGMad
                                 imgIconsSmall.Images.Add(iconAssocString, tai.SmallIcon);
 
                             // Windows would override "Model" as .mdl's type if .mdl is now known by it to "MDL File"
-                            // A little circumvension so SharpGMad defaults back to its internal file type names.
-                            // (I pretty much hope noone has associated .SharpGMad with any file format on their PC!)
-                            FileAssocation.TypeAndIcon defaultTai = FileAssocation.GetInformation(".SharpGMad");
+                            // A little circumvension so LambdaGMad defaults back to its internal file type names.
+                            // (I pretty much hope noone has associated .LambdaGMad with any file format on their PC!)
+                            FileAssocation.TypeAndIcon defaultTai = FileAssocation.GetInformation(".LambdaGMad");
 
-                            if (tai.Type == defaultTai.Type.Replace("SHARPGMAD", extensionNoDot.ToUpperInvariant()))
+                            if (tai.Type == defaultTai.Type.Replace("LambdaGMad", extensionNoDot.ToUpperInvariant()))
                                 tai.Type = String.Empty;
 
                             if (!String.IsNullOrWhiteSpace(tai.Type))
@@ -735,7 +735,7 @@ namespace SharpGMad
             tsbCreateAddon.Enabled = !Whitelist.Override;
 
             UpdateStatus("Addon unloaded.");
-            this.Text = "SharpGMad " + Program.PrettyVersion;
+            this.Text = "LambdaGMad " + Program.PrettyVersion;
         }
 
         // Dock the txtDescription text box.
@@ -746,7 +746,7 @@ namespace SharpGMad
             txtDescriptionSizeDifference = new Size(pnlRightSide.Size.Width - txtMetadataDescription.Size.Width,
                 pnlRightSide.Size.Height - txtMetadataDescription.Size.Height);
 
-            UpdateStatus("SharpGMad welcomes you!");
+            UpdateStatus("LambdaGMad welcomes you!");
         }
 
         private void Main_Resize(object sender, EventArgs e)
@@ -812,7 +812,7 @@ namespace SharpGMad
                     else
                     {
                         // Ask the user for a path to use.
-                        DialogResult askPath = MessageBox.Show("You tried to add " + filename + ", but SharpGMad " +
+                        DialogResult askPath = MessageBox.Show("You tried to add " + filename + ", but LambdaGMad " +
                             "can't figure out where the file should be going inside the addon.\n" +
                             "Do you wish to specify the filename by hand?" +
                             "\n\n(Tip: If you know the folder where the file should be going, open it before adding the " +
@@ -2158,7 +2158,7 @@ namespace SharpGMad
                 if (files.Any(f => f.EndsWith(".gma")))
                 {
                     MessageBox.Show("One or more drag-and-dropped files are GMAs.\nTo load a GMA, only drop one file " +
-                        "into SharpGMad.", "Add files",
+                        "into LambdaGMad.", "Add files",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
@@ -2207,7 +2207,7 @@ namespace SharpGMad
                         else
                         {
                             // Ask the user for a path to use.
-                            DialogResult askPath = MessageBox.Show("You tried to add " + filename + ", but SharpGMad " +
+                            DialogResult askPath = MessageBox.Show("You tried to add " + filename + ", but LambdaGMad " +
                                 "can't figure out where the file should be going inside the addon.\n" +
                                 "Do you wish to specify the filename by hand?" +
                                 "\n\n(Tip: If you know the folder where the file should be going, open it before adding the " +

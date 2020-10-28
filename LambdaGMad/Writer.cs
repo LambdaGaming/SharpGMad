@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Provides ways for compiling addons.

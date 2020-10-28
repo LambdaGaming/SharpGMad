@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Represents the GMA's embedded JSON field.
@@ -140,7 +140,7 @@ namespace SharpGMad
                 throw new AddonJSONException("type is empty!");
             else
             {
-                if (!SharpGMad.Tags.TypeExists(tree.Type.ToLowerInvariant()))
+                if (!LambdaGMad.Tags.TypeExists(tree.Type.ToLowerInvariant()))
                     throw new AddonJSONException("type isn't a supported type!");
                 else
                     Type = tree.Type.ToLowerInvariant();
@@ -155,7 +155,7 @@ namespace SharpGMad
                 {
                     if (tag == String.Empty || tag == null) continue;
 
-                    if (!SharpGMad.Tags.TagExists(tag.ToLowerInvariant()))
+                    if (!LambdaGMad.Tags.TagExists(tag.ToLowerInvariant()))
                         throw new AddonJSONException("tag isn't a supported word!");
                     else
                         Tags.Add(tag.ToLowerInvariant());
@@ -222,7 +222,7 @@ namespace SharpGMad
                 throw new AddonJSONException("type is empty!");
             else
             {
-                if (!SharpGMad.Tags.TypeExists(addon.Type.ToLowerInvariant()))
+                if (!LambdaGMad.Tags.TypeExists(addon.Type.ToLowerInvariant()))
                     throw new AddonJSONException("type isn't a supported type!");
                 else
                     tree.Type = addon.Type.ToLowerInvariant();
@@ -238,7 +238,7 @@ namespace SharpGMad
                 {
                     if (tag == String.Empty || tag == null) continue;
 
-                    if (!SharpGMad.Tags.TagExists(tag.ToLowerInvariant()))
+                    if (!LambdaGMad.Tags.TagExists(tag.ToLowerInvariant()))
                         throw new AddonJSONException("tag isn't a supported word!");
                     else
                         tree.Tags.Add(tag.ToLowerInvariant());

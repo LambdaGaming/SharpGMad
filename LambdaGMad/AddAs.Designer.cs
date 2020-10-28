@@ -1,4 +1,4 @@
-﻿namespace SharpGMad
+﻿namespace LambdaGMad
 {
     partial class AddAs
     {

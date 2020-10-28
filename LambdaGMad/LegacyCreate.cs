@@ -4,14 +4,14 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     partial class LegacyCreate : Form
     {
         public LegacyCreate()
         {
             InitializeComponent();
-            this.Icon = global::SharpGMad.Properties.Resources.create_ico;
+            this.Icon = global::LambdaGMad.Properties.Resources.create_ico;
         }
 
         private void btnAbort_Click(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace SharpGMad
                     !String.IsNullOrWhiteSpace(Date));
 
                 if (hasNewDescription)
-                    newDescription = "## Converted by SharpGMad " + Program.PrettyVersion + " at " +
+                    newDescription = "## Converted by LambdaGMad " + Program.PrettyVersion + " at " +
                         DateTime.Now.ToString("ddd MM dd hh:mm:ss yyyy",
                             System.Globalization.CultureInfo.InvariantCulture) +
                         " (+" + TimeZoneInfo.Local.BaseUtcOffset.ToString("hhmm") + ")";

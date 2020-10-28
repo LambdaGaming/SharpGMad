@@ -4,14 +4,14 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     partial class LegacyExtract : Form
     {
         public LegacyExtract()
         {
             InitializeComponent();
-            this.Icon = global::SharpGMad.Properties.Resources.extract_ico;
+            this.Icon = global::LambdaGMad.Properties.Resources.extract_ico;
         }
 
         private void btnAbort_Click(object sender, EventArgs e)

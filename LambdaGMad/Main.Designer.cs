@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 #endif
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     partial class Main
     {
@@ -225,7 +225,7 @@ namespace SharpGMad
             // 
             this.tsbAddFile.AutoToolTip = false;
             this.tsbAddFile.Enabled = false;
-            this.tsbAddFile.Image = global::SharpGMad.Properties.Resources.add;
+            this.tsbAddFile.Image = global::LambdaGMad.Properties.Resources.add;
             this.tsbAddFile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAddFile.Name = "tsbAddFile";
             this.tsbAddFile.Size = new System.Drawing.Size(68, 23);
@@ -241,7 +241,7 @@ namespace SharpGMad
             // 
             this.tsbPullAll.AutoToolTip = false;
             this.tsbPullAll.Enabled = false;
-            this.tsbPullAll.Image = global::SharpGMad.Properties.Resources.pull_all;
+            this.tsbPullAll.Image = global::LambdaGMad.Properties.Resources.pull_all;
             this.tsbPullAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbPullAll.Name = "tsbPullAll";
             this.tsbPullAll.Size = new System.Drawing.Size(138, 23);
@@ -253,7 +253,7 @@ namespace SharpGMad
             // 
             this.tsbDropAll.AutoToolTip = false;
             this.tsbDropAll.Enabled = false;
-            this.tsbDropAll.Image = global::SharpGMad.Properties.Resources.drop_all;
+            this.tsbDropAll.Image = global::LambdaGMad.Properties.Resources.drop_all;
             this.tsbDropAll.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDropAll.Name = "tsbDropAll";
             this.tsbDropAll.Size = new System.Drawing.Size(94, 23);
@@ -282,7 +282,7 @@ namespace SharpGMad
             // 
             // tsmiViewLargeIcons
             // 
-            this.tsmiViewLargeIcons.Image = global::SharpGMad.Properties.Resources.view_largeicons;
+            this.tsmiViewLargeIcons.Image = global::LambdaGMad.Properties.Resources.view_largeicons;
             this.tsmiViewLargeIcons.Name = "tsmiViewLargeIcons";
             this.tsmiViewLargeIcons.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewLargeIcons.Text = "Large Icons";
@@ -290,7 +290,7 @@ namespace SharpGMad
             // 
             // tsmiViewSmallIcons
             // 
-            this.tsmiViewSmallIcons.Image = global::SharpGMad.Properties.Resources.view_smallicons;
+            this.tsmiViewSmallIcons.Image = global::LambdaGMad.Properties.Resources.view_smallicons;
             this.tsmiViewSmallIcons.Name = "tsmiViewSmallIcons";
             this.tsmiViewSmallIcons.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewSmallIcons.Text = "Small Icons";
@@ -298,7 +298,7 @@ namespace SharpGMad
             // 
             // tsmiViewDetails
             // 
-            this.tsmiViewDetails.Image = global::SharpGMad.Properties.Resources.view_details;
+            this.tsmiViewDetails.Image = global::LambdaGMad.Properties.Resources.view_details;
             this.tsmiViewDetails.Name = "tsmiViewDetails";
             this.tsmiViewDetails.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewDetails.Text = "Details";
@@ -306,7 +306,7 @@ namespace SharpGMad
             // 
             // tsmiViewList
             // 
-            this.tsmiViewList.Image = global::SharpGMad.Properties.Resources.view_list;
+            this.tsmiViewList.Image = global::LambdaGMad.Properties.Resources.view_list;
             this.tsmiViewList.Name = "tsmiViewList";
             this.tsmiViewList.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewList.Text = "List";
@@ -314,7 +314,7 @@ namespace SharpGMad
             // 
             // tsmiViewTiles
             // 
-            this.tsmiViewTiles.Image = global::SharpGMad.Properties.Resources.view_tiles;
+            this.tsmiViewTiles.Image = global::LambdaGMad.Properties.Resources.view_tiles;
             this.tsmiViewTiles.Name = "tsmiViewTiles";
             this.tsmiViewTiles.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewTiles.Text = "Tiles";
@@ -327,7 +327,7 @@ namespace SharpGMad
             // 
             // tsmiViewShowAllFiles
             // 
-            this.tsmiViewShowAllFiles.Image = global::SharpGMad.Properties.Resources.allfiles;
+            this.tsmiViewShowAllFiles.Image = global::LambdaGMad.Properties.Resources.allfiles;
             this.tsmiViewShowAllFiles.Name = "tsmiViewShowAllFiles";
             this.tsmiViewShowAllFiles.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewShowAllFiles.Text = "All files";
@@ -338,7 +338,7 @@ namespace SharpGMad
             // 
             this.tsmiViewShowFolderTree.Checked = true;
             this.tsmiViewShowFolderTree.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiViewShowFolderTree.Image = global::SharpGMad.Properties.Resources.foldertree;
+            this.tsmiViewShowFolderTree.Image = global::LambdaGMad.Properties.Resources.foldertree;
             this.tsmiViewShowFolderTree.Name = "tsmiViewShowFolderTree";
             this.tsmiViewShowFolderTree.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewShowFolderTree.Text = "Folder tree";
@@ -348,7 +348,7 @@ namespace SharpGMad
             // 
             this.tsmiViewShowSubfolders.Checked = true;
             this.tsmiViewShowSubfolders.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tsmiViewShowSubfolders.Image = global::SharpGMad.Properties.Resources.folder_s;
+            this.tsmiViewShowSubfolders.Image = global::LambdaGMad.Properties.Resources.folder_s;
             this.tsmiViewShowSubfolders.Name = "tsmiViewShowSubfolders";
             this.tsmiViewShowSubfolders.Size = new System.Drawing.Size(134, 22);
             this.tsmiViewShowSubfolders.Text = "Subfolders";
@@ -474,7 +474,7 @@ namespace SharpGMad
             // 
             this.tsbUpdateMetadata.AutoToolTip = false;
             this.tsbUpdateMetadata.Enabled = false;
-            this.tsbUpdateMetadata.Image = global::SharpGMad.Properties.Resources.metadata;
+            this.tsbUpdateMetadata.Image = global::LambdaGMad.Properties.Resources.metadata;
             this.tsbUpdateMetadata.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbUpdateMetadata.Name = "tsbUpdateMetadata";
             this.tsbUpdateMetadata.Size = new System.Drawing.Size(118, 22);
@@ -484,7 +484,7 @@ namespace SharpGMad
             // tsbDiscardMetadataChanges
             // 
             this.tsbDiscardMetadataChanges.Enabled = false;
-            this.tsbDiscardMetadataChanges.Image = global::SharpGMad.Properties.Resources.discard;
+            this.tsbDiscardMetadataChanges.Image = global::LambdaGMad.Properties.Resources.discard;
             this.tsbDiscardMetadataChanges.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDiscardMetadataChanges.Name = "tsbDiscardMetadataChanges";
             this.tsbDiscardMetadataChanges.Size = new System.Drawing.Size(66, 22);
@@ -588,7 +588,7 @@ namespace SharpGMad
             // tsbCreateAddon
             // 
             this.tsbCreateAddon.AutoToolTip = false;
-            this.tsbCreateAddon.Image = global::SharpGMad.Properties.Resources.newaddon;
+            this.tsbCreateAddon.Image = global::LambdaGMad.Properties.Resources.newaddon;
             this.tsbCreateAddon.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCreateAddon.Name = "tsbCreateAddon";
             this.tsbCreateAddon.Size = new System.Drawing.Size(86, 22);
@@ -598,7 +598,7 @@ namespace SharpGMad
             // tsbOpenAddon
             // 
             this.tsbOpenAddon.AutoToolTip = false;
-            this.tsbOpenAddon.Image = global::SharpGMad.Properties.Resources.open;
+            this.tsbOpenAddon.Image = global::LambdaGMad.Properties.Resources.open;
             this.tsbOpenAddon.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbOpenAddon.Name = "tsbOpenAddon";
             this.tsbOpenAddon.Size = new System.Drawing.Size(56, 22);
@@ -609,7 +609,7 @@ namespace SharpGMad
             // 
             this.tsbSaveAddon.AutoToolTip = false;
             this.tsbSaveAddon.Enabled = false;
-            this.tsbSaveAddon.Image = global::SharpGMad.Properties.Resources.save;
+            this.tsbSaveAddon.Image = global::LambdaGMad.Properties.Resources.save;
             this.tsbSaveAddon.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSaveAddon.Name = "tsbSaveAddon";
             this.tsbSaveAddon.Size = new System.Drawing.Size(51, 22);
@@ -627,7 +627,7 @@ namespace SharpGMad
             this.tsddbLegacy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiLegacyCreate,
             this.tsmiLegacyExtract});
-            this.tsddbLegacy.Image = global::SharpGMad.Properties.Resources.legacy;
+            this.tsddbLegacy.Image = global::LambdaGMad.Properties.Resources.legacy;
             this.tsddbLegacy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddbLegacy.Name = "tsddbLegacy";
             this.tsddbLegacy.Size = new System.Drawing.Size(132, 22);
@@ -636,7 +636,7 @@ namespace SharpGMad
             // 
             // tsmiLegacyCreate
             // 
-            this.tsmiLegacyCreate.Image = global::SharpGMad.Properties.Resources.create;
+            this.tsmiLegacyCreate.Image = global::LambdaGMad.Properties.Resources.create;
             this.tsmiLegacyCreate.Name = "tsmiLegacyCreate";
             this.tsmiLegacyCreate.Size = new System.Drawing.Size(171, 22);
             this.tsmiLegacyCreate.Text = "Create from folder";
@@ -645,7 +645,7 @@ namespace SharpGMad
             // 
             // tsmiLegacyExtract
             // 
-            this.tsmiLegacyExtract.Image = global::SharpGMad.Properties.Resources.extract;
+            this.tsmiLegacyExtract.Image = global::LambdaGMad.Properties.Resources.extract;
             this.tsmiLegacyExtract.Name = "tsmiLegacyExtract";
             this.tsmiLegacyExtract.Size = new System.Drawing.Size(171, 22);
             this.tsmiLegacyExtract.Text = "Extract to folder";
@@ -687,7 +687,7 @@ namespace SharpGMad
             // 
             // tsmFileRemove
             // 
-            this.tsmFileRemove.Image = global::SharpGMad.Properties.Resources.drop;
+            this.tsmFileRemove.Image = global::LambdaGMad.Properties.Resources.drop;
             this.tsmFileRemove.Name = "tsmFileRemove";
             this.tsmFileRemove.Size = new System.Drawing.Size(152, 22);
             this.tsmFileRemove.Text = "Remove";
@@ -695,7 +695,7 @@ namespace SharpGMad
             // 
             // tsmFileExtract
             // 
-            this.tsmFileExtract.Image = global::SharpGMad.Properties.Resources.extract;
+            this.tsmFileExtract.Image = global::LambdaGMad.Properties.Resources.extract;
             this.tsmFileExtract.Name = "tsmFileExtract";
             this.tsmFileExtract.Size = new System.Drawing.Size(152, 22);
             this.tsmFileExtract.Text = "Extract";
@@ -704,7 +704,7 @@ namespace SharpGMad
             // 
             // tsmFileShellExec
             // 
-            this.tsmFileShellExec.Image = global::SharpGMad.Properties.Resources.execute;
+            this.tsmFileShellExec.Image = global::LambdaGMad.Properties.Resources.execute;
             this.tsmFileShellExec.Name = "tsmFileShellExec";
             this.tsmFileShellExec.Size = new System.Drawing.Size(152, 22);
             this.tsmFileShellExec.Text = "Shell execute";
@@ -713,7 +713,7 @@ namespace SharpGMad
             // 
             // tsmFileExportTo
             // 
-            this.tsmFileExportTo.Image = global::SharpGMad.Properties.Resources.export;
+            this.tsmFileExportTo.Image = global::LambdaGMad.Properties.Resources.export;
             this.tsmFileExportTo.Name = "tsmFileExportTo";
             this.tsmFileExportTo.Size = new System.Drawing.Size(152, 22);
             this.tsmFileExportTo.Text = "Export to...";
@@ -723,7 +723,7 @@ namespace SharpGMad
             // 
             // tsmFilePull
             // 
-            this.tsmFilePull.Image = global::SharpGMad.Properties.Resources.pull;
+            this.tsmFilePull.Image = global::LambdaGMad.Properties.Resources.pull;
             this.tsmFilePull.Name = "tsmFilePull";
             this.tsmFilePull.Size = new System.Drawing.Size(152, 22);
             this.tsmFilePull.Text = "Update";
@@ -732,7 +732,7 @@ namespace SharpGMad
             // 
             // tsmFileOpenExport
             // 
-            this.tsmFileOpenExport.Image = global::SharpGMad.Properties.Resources.open_export;
+            this.tsmFileOpenExport.Image = global::LambdaGMad.Properties.Resources.open_export;
             this.tsmFileOpenExport.Name = "tsmFileOpenExport";
             this.tsmFileOpenExport.Size = new System.Drawing.Size(152, 22);
             this.tsmFileOpenExport.Text = "Open export";
@@ -741,7 +741,7 @@ namespace SharpGMad
             // 
             // tsmFileDropExport
             // 
-            this.tsmFileDropExport.Image = global::SharpGMad.Properties.Resources.drop_export;
+            this.tsmFileDropExport.Image = global::LambdaGMad.Properties.Resources.drop_export;
             this.tsmFileDropExport.Name = "tsmFileDropExport";
             this.tsmFileDropExport.Size = new System.Drawing.Size(152, 22);
             this.tsmFileDropExport.Text = "Drop export";
@@ -756,7 +756,7 @@ namespace SharpGMad
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.tsToolbar);
             this.Name = "Main";
-            this.Text = "SharpGMad";
+            this.Text = "LambdaGMad";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.Resize += new System.EventHandler(this.Main_Resize);

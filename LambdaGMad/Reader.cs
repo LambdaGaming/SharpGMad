@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Represents an error regarding reading addon files.

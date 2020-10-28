@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Provides methods for the legacy interface of gmad.exe.
@@ -255,7 +255,7 @@ namespace SharpGMad
                     !String.IsNullOrWhiteSpace(Date));
 
                 if (hasNewDescription)
-                    newDescription = "## Converted by SharpGMad " + Program.PrettyVersion + " at " +
+                    newDescription = "## Converted by LambdaGMad " + Program.PrettyVersion + " at " +
                         DateTime.Now.ToString("yyyy. MM. dd. hh:mm:ss") +
                         " (+" + TimeZoneInfo.Local.BaseUtcOffset.ToString("hhmm") + ")";
 

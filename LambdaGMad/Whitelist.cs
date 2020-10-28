@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Represents an error with files checking against the whitelist.

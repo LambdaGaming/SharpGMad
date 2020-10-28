@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Provides an interface for handling realtime functionality from the commandline.
@@ -45,7 +45,7 @@ namespace SharpGMad
                 if (AddonHandle == null)
                 {
 #if WINDOWS
-                    Console.Write("SharpGMad> ");
+                    Console.Write("LambdaGMad> ");
 #endif
 #if MONO
                     Console.Write("$ ");
@@ -602,7 +602,7 @@ namespace SharpGMad
                     case "?":
                     case "help":
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("SharpGMad " + Program.PrettyVersion);
+                        Console.WriteLine("LambdaGMad " + Program.PrettyVersion);
                         Console.WriteLine("Available commands:");
                         Console.ResetColor();
 
@@ -652,7 +652,7 @@ namespace SharpGMad
                             Console.WriteLine("path                       Prints the full path of the current addon.");
                         }
 
-                        Console.WriteLine("pwd                        Prints SharpGMad's current working directory");
+                        Console.WriteLine("pwd                        Prints LambdaGMad's current working directory");
                         Console.WriteLine("cd <folder>                Changes the current working directory to <folder>");
 #if MONO
                         Console.Write("ls                         ");
@@ -1112,7 +1112,7 @@ namespace SharpGMad
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.Write("This addon is against the GMA whitelist rules defined by garry!\n" +
                         e.Message + "\n\nFor datamining purposes, it is still possible to open this addon, HOWEVER\n" +
-                        "opening this addon is an illegal operation and SharpGMad will\nprevent further modifications.");
+                        "opening this addon is an illegal operation and LambdaGMad will\nprevent further modifications.");
                     Console.ResetColor();
 
                     bool decided = false;
@@ -1223,7 +1223,7 @@ namespace SharpGMad
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.Write("You tried to add " + filename +
-                        (!String.IsNullOrWhiteSpace(internalPath) ? " (as " + internalPath + ")" : null) + ", but SharpGMad " +
+                        (!String.IsNullOrWhiteSpace(internalPath) ? " (as " + internalPath + ")" : null) + ", but LambdaGMad " +
                         "can't figure out where the file should be going inside the addon.\n" +
                         "Please specify the filename by hand (leave empty if wish to cancel): ");
                     Console.ResetColor();

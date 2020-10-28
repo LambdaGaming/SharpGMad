@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace SharpGMad
+namespace LambdaGMad
 {
     /// <summary>
     /// Provides methods to use the internal tag database.

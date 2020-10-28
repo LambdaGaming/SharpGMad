@@ -1,7 +1,7 @@
-SharpGMad
+LambdaGMad
 =========
 
-SharpGMad is a tool used to manipulate [Garry's
+LambdaGMad is a tool used to manipulate [Garry's
 Mod](http://en.wikipedia.org/wiki/Garry%27s_Mod) workshop addon packages
 (_.gma_ files).
 
@@ -18,9 +18,9 @@ Usage
 
 ### Realtime mode
 
-This is the main feature and reason for SharpGMad's existence. While gmad
+This is the main feature and reason for LambdaGMad's existence. While gmad
 can only fully pack a folder into an addon or fully extract an addon to a
-folder, with SharpGMad, you can effectively browse a file just as how you
+folder, with LambdaGMad, you can effectively browse a file just as how you
 would be browsing any other archive (for example, ZIP, RAR or TAR files).
 
 The realtime mode supports **on-the-fly** adding, removing and updating of
@@ -34,20 +34,20 @@ mode.
 
 #### GUI
 
-`SharpGMad [path]`
+`LambdaGMad [path]`
 
 If the program is started with no command-line arguments (or only one, and
 that is a file path), a graphical interface will load. (You can also
-**drag & drop** a file in your file explorer onto SharpGMad's executable
+**drag & drop** a file in your file explorer onto LambdaGMad's executable
 to open it automatically.)
 
 ![Screenshot of the graphical interface](Screenshot.png)
 
 #### Terminal
 
-`SharpGMad realtime`
+`LambdaGMad realtime`
 
-Starting SharpGMad with the _realtime_ argument from the terminal loads
+Starting LambdaGMad with the _realtime_ argument from the terminal loads
 its shell. If you are more savvy with using the terminal for quick
 operation, this mode is for you. Every operation possible in the graphical
 mode has a counterpart in the terminal (and vice-versa).
@@ -57,25 +57,25 @@ Type `help` in the shell to see a list of available commands.
 Optionally, you can specifiy a file as an extra argument to have it loaded
 initally:
 
-`SharpGMad realtime -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma"`
+`LambdaGMad realtime -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma"`
 
 ### `gmad` mode
 
-SharpGMad provides the legacy interface of gmad just in case a gmad binary
+LambdaGMad provides the legacy interface of gmad just in case a gmad binary
 is not at hand, so you can execute the "legacy" full-extract and
 full-create operations the same way you would with gmad. (Just type
-`SharpGMad` instead of `gmad` as the executable's name.)
+`LambdaGMad` instead of `gmad` as the executable's name.)
 
 As per [gmad's
 manual](https://github.com/garrynewman/gmad/tree/a121a70e298ab6e07fa77a5e4f72018c7480f758#usage):
 
 #### Create new GMA file from a folder
 
-`SharpGMad create -folder "C:\path\to\addon\folder\" -out "C:\where\to\save\file\out.gma"`
+`LambdaGMad create -folder "C:\path\to\addon\folder\" -out "C:\where\to\save\file\out.gma"`
 
 #### Extract an existing file
 
-`SharpGMad extract -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma" -out "C:\this\folder"`
+`LambdaGMad extract -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma" -out "C:\this\folder"`
 
 ### Conversion mode
 
@@ -83,10 +83,10 @@ The so-called _loose_ addon structures used in Garry's Mod 12 (subfolders
 of the `addons` folder containing each and every file of the addon on the
 hard disk) are also supported for conversion.
 
-SharpGMad will use an existing `info.txt` or `addon.txt`ÿfile to load the
+LambdaGMad will use an existing `info.txt` or `addon.txt`ï¿½file to load the
 metadata of the addon. Any missing metadata will be asked from the user.
 
-When converting from a folder, SharpGMad auto-discovers whether it is an
+When converting from a folder, LambdaGMad auto-discovers whether it is an
 old structure or a "new", gmad-compatible structure.
 
 When extracting a gma, you can specify `-gmod12` as an extra argument of
@@ -98,7 +98,7 @@ graphical interface, under the option _Legacy operations_.
 Compiling and requirements
 --------------------------
 
-SharpGMad is written using the .NET 4.0 framework. This is the only
+LambdaGMad is written using the .NET 4.0 framework. This is the only
 requirement, you can compile the solution with any development environment
 on any computer compatible with .NET 4.0.
 
@@ -113,12 +113,12 @@ iron everything out.
 **CAUTION!** Most Linux distributions tend to install an old version of
 Mono (like 2.10) by default. Such old versions _have_ compatibility
 issues. Please acquire a newer version, for example 3.2.5, as it and
-SharpGMad tend to be more compatible.
+LambdaGMad tend to be more compatible.
 
 Disclaimer
 ----------
 
-The program _SharpGMad_ is provided "AS IS" without any expressed or
+The program _LambdaGMad_ is provided "AS IS" without any expressed or
 implied warranties. 
 
 It is a general rule of thumb that you should **NEVER** start editing

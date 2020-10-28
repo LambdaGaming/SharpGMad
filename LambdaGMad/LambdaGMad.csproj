@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SharpGMad.Program</StartupObject>
+    <StartupObject>LambdaGMad.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\gma.ico</ApplicationIcon>

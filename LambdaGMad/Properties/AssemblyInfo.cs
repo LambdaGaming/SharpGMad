@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SharpGMad")]
+[assembly: AssemblyTitle("LambdaGMad")]
 [assembly: AssemblyDescription("gmad with GUI, written in C#, with realtime access for Garry's Mod addon files")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Whisperity")]
-[assembly: AssemblyProduct("SharpGMad")]
+[assembly: AssemblyProduct("LambdaGMad")]
 [assembly: AssemblyCopyright("Copyright © 2013, Whisperity")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
