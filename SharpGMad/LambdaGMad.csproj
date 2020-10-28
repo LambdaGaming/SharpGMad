@@ -8,8 +8,8 @@
     <ProjectGuid>{D3953BB9-01D2-43BA-8457-1E4492200EA0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SharpGMad</RootNamespace>
-    <AssemblyName>SharpGMad</AssemblyName>
+    <RootNamespace>LambdaGMad</RootNamespace>
+    <AssemblyName>LambdaGMad</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
