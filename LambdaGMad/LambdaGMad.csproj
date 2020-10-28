@@ -110,25 +110,12 @@
     </Compile>
     <Compile Include="Addon.cs" />
     <Compile Include="RealtimeAddon.cs" />
-    <Compile Include="LegacyExtract.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LegacyExtract.Designer.cs">
-      <DependentUpon>LegacyExtract.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LegacyCreate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LegacyCreate.Designer.cs">
-      <DependentUpon>LegacyCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Legacy.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,12 +135,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AddAs.resx">
       <DependentUpon>AddAs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LegacyExtract.resx">
-      <DependentUpon>LegacyExtract.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LegacyCreate.resx">
-      <DependentUpon>LegacyCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -1,17 +1,9 @@
 LambdaGMad
 =========
 
-LambdaGMad is a tool used to manipulate [Garry's
-Mod](http://en.wikipedia.org/wiki/Garry%27s_Mod) workshop addon packages
-(_.gma_ files).
-
-The program had been originally created as a straight reimplementation in
-C# of Garry Newman's [GMad](http://github.com/garrynewman/gmad), but over
-time, it was given an extended set of functionality, most notably the
-graphical interface and realtime access.
-
-(The current version implements and complies with
-[`a121a70`](http://github.com/garrynewman/gmad/tree/a121a70e298ab6e07fa77a5e4f72018c7480f758).)
+LambdaGMad is a tool used to create and extract Garry's
+Mod workshop addon packages
+(_.gma_ files). It is a fork of [Whisperity's SharpGMad](https://github.com/whisperity/SharpGMad) that aims to make the program more usable with modern versions of GMad.
 
 Usage
 -----
@@ -59,61 +51,16 @@ initally:
 
 `LambdaGMad realtime -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma"`
 
-### `gmad` mode
-
-LambdaGMad provides the legacy interface of gmad just in case a gmad binary
-is not at hand, so you can execute the "legacy" full-extract and
-full-create operations the same way you would with gmad. (Just type
-`LambdaGMad` instead of `gmad` as the executable's name.)
-
-As per [gmad's
-manual](https://github.com/garrynewman/gmad/tree/a121a70e298ab6e07fa77a5e4f72018c7480f758#usage):
-
-#### Create new GMA file from a folder
-
-`LambdaGMad create -folder "C:\path\to\addon\folder\" -out "C:\where\to\save\file\out.gma"`
-
-#### Extract an existing file
-
-`LambdaGMad extract -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma" -out "C:\this\folder"`
-
-### Conversion mode
-
-The so-called _loose_ addon structures used in Garry's Mod 12 (subfolders
-of the `addons` folder containing each and every file of the addon on the
-hard disk) are also supported for conversion.
-
-LambdaGMad will use an existing `info.txt` or `addon.txt`�file to load the
-metadata of the addon. Any missing metadata will be asked from the user.
-
-When converting from a folder, LambdaGMad auto-discovers whether it is an
-old structure or a "new", gmad-compatible structure.
-
-When extracting a gma, you can specify `-gmod12` as an extra argument of
-the `extract` command if you wish to extract to the old layout.
-
-Corresponding options for back-and-forth conversion are available on the
-graphical interface, under the option _Legacy operations_.
-
 Compiling and requirements
 --------------------------
 
 LambdaGMad is written using the .NET 4.0 framework. This is the only
 requirement, you can compile the solution with any development environment
-on any computer compatible with .NET 4.0.
-
-This usually means a computer with at least Windows XP Service Pack 3
+on any computer compatible with .NET 4.0. This usually means a computer with at least Windows XP Service Pack 3
 installed.
 
 Cross-platform operation with [Mono](http://www.mono-project.com/) is also
-supported, though in **BETA**. Mono has its hiccups (especially with the
-grahpical interface) here and there, but I try to do my best to test and
-iron everything out.
-
-**CAUTION!** Most Linux distributions tend to install an old version of
-Mono (like 2.10) by default. Such old versions _have_ compatibility
-issues. Please acquire a newer version, for example 3.2.5, as it and
-LambdaGMad tend to be more compatible.
+supported, but is currently untested on Mac and Linux.
 
 Disclaimer
 ----------
