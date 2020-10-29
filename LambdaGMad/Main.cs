@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace LambdaGMad
 {
@@ -13,6 +14,9 @@ namespace LambdaGMad
 		/// The currently open addon.
 		/// </summary>
 		RealtimeAddon AddonHandle;
+		ContextMenuStrip cmsFileEntryList;
+		ToolStripMenuItem ExpandAll;
+		ToolStripMenuItem CollapseAll;
 
 		private Main()
 		{
@@ -36,6 +40,40 @@ namespace LambdaGMad
 			tsmiViewShowFolderTree_Click( tsmiViewShowFolderTree, new EventArgs() ); // Same as above.
 
 			tsbCreateAddon.Enabled = !Whitelist.Override;
+
+			// Right click event handler
+			tvFolders.NodeMouseClick += ( sender, args ) => {
+				if ( args.Button == MouseButtons.Right )
+				{
+					tvFolders.SelectedNode = args.Node;
+					tvFolders_RightClick( sender, args );
+				}
+			};
+
+			// Extra context menu since I can't figure out how to add it through the designer
+			ExpandAll = new ToolStripMenuItem();
+			ExpandAll.Image = Properties.Resources.view_details;
+			ExpandAll.Name = "ExpandAll";
+			ExpandAll.Size = new Size( 143, 22 );
+			ExpandAll.Text = "Expand All";
+			ExpandAll.Click += new EventHandler( ExpandAll_Click );
+
+			CollapseAll = new ToolStripMenuItem();
+			CollapseAll.Image = Properties.Resources.parentfolder_s;
+			CollapseAll.Name = "CollapseAll";
+			CollapseAll.Size = new Size( 143, 22 );
+			CollapseAll.Text = "Collapse All";
+			CollapseAll.Click += new EventHandler( CollapseAll_Click );
+
+			cmsFileEntryList = new ContextMenuStrip( new Container() );
+			cmsFileEntryList.SuspendLayout();
+			cmsFileEntryList.Items.AddRange( new ToolStripItem[] {
+				ExpandAll,
+				CollapseAll,
+				tsmFileRemove
+			} );
+			cmsFileEntryList.Size = new Size( 144, 164 );
+			cmsFileEntryList.ResumeLayout( false );
 		}
 
 		public Main( string[] args, bool whitelistOverride = false )
@@ -437,6 +475,11 @@ namespace LambdaGMad
 		{
 			// When a node is selected, we have to update the file list (lstFiles) to display only the files in the selected node.
 			UpdateFileList();
+		}
+
+		private void tvFolders_RightClick( object sender, TreeNodeMouseClickEventArgs e )
+		{
+			cmsFileEntryList.Show( Cursor.Position );
 		}
 
 		/// <summary>The types of what a file entry (in the lstFiles list) can be</summary>
@@ -1277,6 +1320,16 @@ namespace LambdaGMad
 					UpdateFileList();
 				}
 			}
+		}
+
+		private void ExpandAll_Click( object sender, EventArgs e )
+		{
+			tvFolders.ExpandAll();
+		}
+
+		private void CollapseAll_Click( object sender, EventArgs e )
+		{
+			tvFolders.CollapseAll();
 		}
 
 		private void tsbUpdateMetadata_Click( object sender, EventArgs e )
