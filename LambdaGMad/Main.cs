@@ -1909,6 +1909,7 @@ namespace LambdaGMad
 								string extractPath = fbdFileExtractMulti.SelectedPath;
 								List<string> failed_paths = new List<string>( files.Count );
 								poggers.Visible = true;
+								poggers.Maximum = files.Count;
 								foreach ( string file in files )
 								{
 									string outpath = extractPath + "/" + file;
