@@ -71,9 +71,9 @@ namespace LambdaGMad
 		{
 			this.components = new System.ComponentModel.Container();
 			this.lstFiles = new System.Windows.Forms.ListView();
-			this.chFilename = ( ( System.Windows.Forms.ColumnHeader ) ( new System.Windows.Forms.ColumnHeader() ) );
-			this.chFileType = ( ( System.Windows.Forms.ColumnHeader ) ( new System.Windows.Forms.ColumnHeader() ) );
-			this.chSize = ( ( System.Windows.Forms.ColumnHeader ) ( new System.Windows.Forms.ColumnHeader() ) );
+			this.chFilename = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.chFileType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.chSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ofdAddon = new System.Windows.Forms.OpenFileDialog();
 			this.tsFileOperations = new System.Windows.Forms.ToolStrip();
 			this.tsbAddFile = new System.Windows.Forms.ToolStripButton();
@@ -93,6 +93,7 @@ namespace LambdaGMad
 			this.pnlLeftSide = new System.Windows.Forms.Panel();
 			this.spcFoldersAndFiles = new System.Windows.Forms.SplitContainer();
 			this.tvFolders = new System.Windows.Forms.TreeView();
+			this.poggers = new System.Windows.Forms.ProgressBar();
 			this.pnlFileOpsToolbar = new System.Windows.Forms.Panel();
 			this.ssStatus = new System.Windows.Forms.StatusStrip();
 			this.tsslStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -119,7 +120,7 @@ namespace LambdaGMad
 			this.sfdAddon = new System.Windows.Forms.SaveFileDialog();
 			this.sfdExportFile = new System.Windows.Forms.SaveFileDialog();
 			this.tssExportSeparator = new System.Windows.Forms.ToolStripSeparator();
-			this.cmsFileEntry = new System.Windows.Forms.ContextMenuStrip( this.components );
+			this.cmsFileEntry = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.tsmFileShellExec = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsmFileExtract = new System.Windows.Forms.ToolStripMenuItem();
 			this.tsmFileRemove = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,7 +131,7 @@ namespace LambdaGMad
 			this.fbdFileExtractMulti = new System.Windows.Forms.FolderBrowserDialog();
 			this.tsFileOperations.SuspendLayout();
 			this.pnlLeftSide.SuspendLayout();
-			( ( System.ComponentModel.ISupportInitialize ) ( this.spcFoldersAndFiles ) ).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.spcFoldersAndFiles)).BeginInit();
 			this.spcFoldersAndFiles.Panel1.SuspendLayout();
 			this.spcFoldersAndFiles.Panel2.SuspendLayout();
 			this.spcFoldersAndFiles.SuspendLayout();
@@ -146,26 +147,26 @@ namespace LambdaGMad
 			// lstFiles
 			// 
 			this.lstFiles.AllowDrop = true;
-			this.lstFiles.Columns.AddRange( new System.Windows.Forms.ColumnHeader[] {
-			this.chFilename,
-			this.chFileType,
-			this.chSize} );
+			this.lstFiles.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chFilename,
+            this.chFileType,
+            this.chSize});
 			this.lstFiles.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lstFiles.HideSelection = false;
-			this.lstFiles.Location = new System.Drawing.Point( 0, 0 );
+			this.lstFiles.Location = new System.Drawing.Point(0, 0);
 			this.lstFiles.Name = "lstFiles";
 			this.lstFiles.ShowGroups = false;
 			this.lstFiles.ShowItemToolTips = true;
-			this.lstFiles.Size = new System.Drawing.Size( 383, 412 );
+			this.lstFiles.Size = new System.Drawing.Size(383, 412);
 			this.lstFiles.TabIndex = 0;
-			this.lstFiles.TileSize = new System.Drawing.Size( 150, 50 );
+			this.lstFiles.TileSize = new System.Drawing.Size(150, 50);
 			this.lstFiles.UseCompatibleStateImageBehavior = false;
-			this.lstFiles.SelectedIndexChanged += new System.EventHandler( this.lstFiles_SelectedIndexChanged );
-			this.lstFiles.DragDrop += new System.Windows.Forms.DragEventHandler( this.lstFiles_DragDrop );
-			this.lstFiles.DragEnter += new System.Windows.Forms.DragEventHandler( this.lstFiles_DragEnter );
-			this.lstFiles.KeyDown += new System.Windows.Forms.KeyEventHandler( this.lstFiles_KeyDown );
-			this.lstFiles.MouseClick += new System.Windows.Forms.MouseEventHandler( this.lstFiles_MouseClick );
-			this.lstFiles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler( this.lstFiles_MouseDoubleClick );
+			this.lstFiles.SelectedIndexChanged += new System.EventHandler(this.lstFiles_SelectedIndexChanged);
+			this.lstFiles.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstFiles_DragDrop);
+			this.lstFiles.DragEnter += new System.Windows.Forms.DragEventHandler(this.lstFiles_DragEnter);
+			this.lstFiles.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstFiles_KeyDown);
+			this.lstFiles.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstFiles_MouseClick);
+			this.lstFiles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstFiles_MouseDoubleClick);
 			// 
 			// chFilename
 			// 
@@ -192,15 +193,15 @@ namespace LambdaGMad
 			// 
 			this.tsFileOperations.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tsFileOperations.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-			this.tsFileOperations.Items.AddRange( new System.Windows.Forms.ToolStripItem[] {
-			this.tsbAddFile,
-			this.tssExportHeaderSeparator,
-			this.tsbPullAll,
-			this.tsbDropAll,
-			this.tsddbViewOptions} );
-			this.tsFileOperations.Location = new System.Drawing.Point( 0, 0 );
+			this.tsFileOperations.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbAddFile,
+            this.tssExportHeaderSeparator,
+            this.tsbPullAll,
+            this.tsbDropAll,
+            this.tsddbViewOptions});
+			this.tsFileOperations.Location = new System.Drawing.Point(0, 0);
 			this.tsFileOperations.Name = "tsFileOperations";
-			this.tsFileOperations.Size = new System.Drawing.Size( 552, 26 );
+			this.tsFileOperations.Size = new System.Drawing.Size(552, 26);
 			this.tsFileOperations.TabIndex = 0;
 			// 
 			// tsbAddFile
@@ -210,14 +211,14 @@ namespace LambdaGMad
 			this.tsbAddFile.Image = global::LambdaGMad.Properties.Resources.add;
 			this.tsbAddFile.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbAddFile.Name = "tsbAddFile";
-			this.tsbAddFile.Size = new System.Drawing.Size( 68, 23 );
+			this.tsbAddFile.Size = new System.Drawing.Size(68, 23);
 			this.tsbAddFile.Text = "Add file";
-			this.tsbAddFile.Click += new System.EventHandler( this.tsbAddFile_Click );
+			this.tsbAddFile.Click += new System.EventHandler(this.tsbAddFile_Click);
 			// 
 			// tssExportHeaderSeparator
 			// 
 			this.tssExportHeaderSeparator.Name = "tssExportHeaderSeparator";
-			this.tssExportHeaderSeparator.Size = new System.Drawing.Size( 6, 26 );
+			this.tssExportHeaderSeparator.Size = new System.Drawing.Size(6, 26);
 			// 
 			// tsbPullAll
 			// 
@@ -226,10 +227,10 @@ namespace LambdaGMad
 			this.tsbPullAll.Image = global::LambdaGMad.Properties.Resources.pull_all;
 			this.tsbPullAll.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbPullAll.Name = "tsbPullAll";
-			this.tsbPullAll.Size = new System.Drawing.Size( 139, 23 );
+			this.tsbPullAll.Size = new System.Drawing.Size(139, 23);
 			this.tsbPullAll.Text = "Update exported files";
 			this.tsbPullAll.ToolTipText = "Updates all changes from external files into the addon";
-			this.tsbPullAll.Click += new System.EventHandler( this.tsbPullAll_Click );
+			this.tsbPullAll.Click += new System.EventHandler(this.tsbPullAll_Click);
 			// 
 			// tsbDropAll
 			// 
@@ -238,27 +239,27 @@ namespace LambdaGMad
 			this.tsbDropAll.Image = global::LambdaGMad.Properties.Resources.drop_all;
 			this.tsbDropAll.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbDropAll.Name = "tsbDropAll";
-			this.tsbDropAll.Size = new System.Drawing.Size( 95, 23 );
+			this.tsbDropAll.Size = new System.Drawing.Size(95, 23);
 			this.tsbDropAll.Text = "Drop exports";
 			this.tsbDropAll.ToolTipText = "Deletes all exported files";
-			this.tsbDropAll.Click += new System.EventHandler( this.tsbDropAll_Click );
+			this.tsbDropAll.Click += new System.EventHandler(this.tsbDropAll_Click);
 			// 
 			// tsddbViewOptions
 			// 
 			this.tsddbViewOptions.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-			this.tsddbViewOptions.DropDownItems.AddRange( new System.Windows.Forms.ToolStripItem[] {
-			this.tsmiViewLargeIcons,
-			this.tsmiViewSmallIcons,
-			this.tsmiViewDetails,
-			this.tsmiViewList,
-			this.tsmiViewTiles,
-			this.tssViewSeparator,
-			this.tsmiViewShowAllFiles,
-			this.tsmiViewShowFolderTree,
-			this.tsmiViewShowSubfolders} );
+			this.tsddbViewOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiViewLargeIcons,
+            this.tsmiViewSmallIcons,
+            this.tsmiViewDetails,
+            this.tsmiViewList,
+            this.tsmiViewTiles,
+            this.tssViewSeparator,
+            this.tsmiViewShowAllFiles,
+            this.tsmiViewShowFolderTree,
+            this.tsmiViewShowSubfolders});
 			this.tsddbViewOptions.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsddbViewOptions.Name = "tsddbViewOptions";
-			this.tsddbViewOptions.Size = new System.Drawing.Size( 45, 23 );
+			this.tsddbViewOptions.Size = new System.Drawing.Size(45, 23);
 			this.tsddbViewOptions.Text = "View";
 			this.tsddbViewOptions.ToolTipText = "Change the view of the file list";
 			// 
@@ -266,55 +267,55 @@ namespace LambdaGMad
 			// 
 			this.tsmiViewLargeIcons.Image = global::LambdaGMad.Properties.Resources.view_largeicons;
 			this.tsmiViewLargeIcons.Name = "tsmiViewLargeIcons";
-			this.tsmiViewLargeIcons.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewLargeIcons.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewLargeIcons.Text = "Large Icons";
-			this.tsmiViewLargeIcons.Click += new System.EventHandler( this.tsmiViewElements_changeView );
+			this.tsmiViewLargeIcons.Click += new System.EventHandler(this.tsmiViewElements_changeView);
 			// 
 			// tsmiViewSmallIcons
 			// 
 			this.tsmiViewSmallIcons.Image = global::LambdaGMad.Properties.Resources.view_smallicons;
 			this.tsmiViewSmallIcons.Name = "tsmiViewSmallIcons";
-			this.tsmiViewSmallIcons.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewSmallIcons.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewSmallIcons.Text = "Small Icons";
-			this.tsmiViewSmallIcons.Click += new System.EventHandler( this.tsmiViewElements_changeView );
+			this.tsmiViewSmallIcons.Click += new System.EventHandler(this.tsmiViewElements_changeView);
 			// 
 			// tsmiViewDetails
 			// 
 			this.tsmiViewDetails.Image = global::LambdaGMad.Properties.Resources.view_details;
 			this.tsmiViewDetails.Name = "tsmiViewDetails";
-			this.tsmiViewDetails.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewDetails.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewDetails.Text = "Details";
-			this.tsmiViewDetails.Click += new System.EventHandler( this.tsmiViewElements_changeView );
+			this.tsmiViewDetails.Click += new System.EventHandler(this.tsmiViewElements_changeView);
 			// 
 			// tsmiViewList
 			// 
 			this.tsmiViewList.Image = global::LambdaGMad.Properties.Resources.view_list;
 			this.tsmiViewList.Name = "tsmiViewList";
-			this.tsmiViewList.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewList.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewList.Text = "List";
-			this.tsmiViewList.Click += new System.EventHandler( this.tsmiViewElements_changeView );
+			this.tsmiViewList.Click += new System.EventHandler(this.tsmiViewElements_changeView);
 			// 
 			// tsmiViewTiles
 			// 
 			this.tsmiViewTiles.Image = global::LambdaGMad.Properties.Resources.view_tiles;
 			this.tsmiViewTiles.Name = "tsmiViewTiles";
-			this.tsmiViewTiles.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewTiles.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewTiles.Text = "Tiles";
-			this.tsmiViewTiles.Click += new System.EventHandler( this.tsmiViewElements_changeView );
+			this.tsmiViewTiles.Click += new System.EventHandler(this.tsmiViewElements_changeView);
 			// 
 			// tssViewSeparator
 			// 
 			this.tssViewSeparator.Name = "tssViewSeparator";
-			this.tssViewSeparator.Size = new System.Drawing.Size( 131, 6 );
+			this.tssViewSeparator.Size = new System.Drawing.Size(131, 6);
 			// 
 			// tsmiViewShowAllFiles
 			// 
 			this.tsmiViewShowAllFiles.Image = global::LambdaGMad.Properties.Resources.allfiles;
 			this.tsmiViewShowAllFiles.Name = "tsmiViewShowAllFiles";
-			this.tsmiViewShowAllFiles.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewShowAllFiles.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewShowAllFiles.Text = "All files";
 			this.tsmiViewShowAllFiles.ToolTipText = "Whether or not the file list view should show all files, not just current folder";
-			this.tsmiViewShowAllFiles.Click += new System.EventHandler( this.tsmiViewShowAllFiles_Click );
+			this.tsmiViewShowAllFiles.Click += new System.EventHandler(this.tsmiViewShowAllFiles_Click);
 			// 
 			// tsmiViewShowFolderTree
 			// 
@@ -322,9 +323,9 @@ namespace LambdaGMad
 			this.tsmiViewShowFolderTree.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.tsmiViewShowFolderTree.Image = global::LambdaGMad.Properties.Resources.foldertree;
 			this.tsmiViewShowFolderTree.Name = "tsmiViewShowFolderTree";
-			this.tsmiViewShowFolderTree.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewShowFolderTree.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewShowFolderTree.Text = "Folder tree";
-			this.tsmiViewShowFolderTree.Click += new System.EventHandler( this.tsmiViewShowFolderTree_Click );
+			this.tsmiViewShowFolderTree.Click += new System.EventHandler(this.tsmiViewShowFolderTree_Click);
 			// 
 			// tsmiViewShowSubfolders
 			// 
@@ -332,124 +333,135 @@ namespace LambdaGMad
 			this.tsmiViewShowSubfolders.CheckState = System.Windows.Forms.CheckState.Checked;
 			this.tsmiViewShowSubfolders.Image = global::LambdaGMad.Properties.Resources.folder_s;
 			this.tsmiViewShowSubfolders.Name = "tsmiViewShowSubfolders";
-			this.tsmiViewShowSubfolders.Size = new System.Drawing.Size( 134, 22 );
+			this.tsmiViewShowSubfolders.Size = new System.Drawing.Size(134, 22);
 			this.tsmiViewShowSubfolders.Text = "Subfolders";
 			this.tsmiViewShowSubfolders.ToolTipText = "Switch whether the file list should show subfolders or not";
-			this.tsmiViewShowSubfolders.Click += new System.EventHandler( this.tsmiViewShowSubfolders_Click );
+			this.tsmiViewShowSubfolders.Click += new System.EventHandler(this.tsmiViewShowSubfolders_Click);
 			// 
 			// pnlLeftSide
 			// 
-			this.pnlLeftSide.Controls.Add( this.spcFoldersAndFiles );
-			this.pnlLeftSide.Controls.Add( this.pnlFileOpsToolbar );
-			this.pnlLeftSide.Controls.Add( this.ssStatus );
+			this.pnlLeftSide.Controls.Add(this.spcFoldersAndFiles);
+			this.pnlLeftSide.Controls.Add(this.pnlFileOpsToolbar);
+			this.pnlLeftSide.Controls.Add(this.ssStatus);
 			this.pnlLeftSide.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlLeftSide.Location = new System.Drawing.Point( 0, 0 );
+			this.pnlLeftSide.Location = new System.Drawing.Point(0, 0);
 			this.pnlLeftSide.Name = "pnlLeftSide";
-			this.pnlLeftSide.Size = new System.Drawing.Size( 552, 443 );
+			this.pnlLeftSide.Size = new System.Drawing.Size(552, 443);
 			this.pnlLeftSide.TabIndex = 11;
 			// 
 			// spcFoldersAndFiles
 			// 
 			this.spcFoldersAndFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.spcFoldersAndFiles.Location = new System.Drawing.Point( 0, 26 );
+			this.spcFoldersAndFiles.Location = new System.Drawing.Point(0, 26);
 			this.spcFoldersAndFiles.Name = "spcFoldersAndFiles";
 			// 
 			// spcFoldersAndFiles.Panel1
 			// 
-			this.spcFoldersAndFiles.Panel1.Controls.Add( this.tvFolders );
+			this.spcFoldersAndFiles.Panel1.Controls.Add(this.tvFolders);
 			// 
 			// spcFoldersAndFiles.Panel2
 			// 
-			this.spcFoldersAndFiles.Panel2.Controls.Add( this.lstFiles );
-			this.spcFoldersAndFiles.Size = new System.Drawing.Size( 552, 412 );
+			this.spcFoldersAndFiles.Panel2.Controls.Add(this.poggers);
+			this.spcFoldersAndFiles.Panel2.Controls.Add(this.lstFiles);
+			this.spcFoldersAndFiles.Size = new System.Drawing.Size(552, 412);
 			this.spcFoldersAndFiles.SplitterDistance = 165;
 			this.spcFoldersAndFiles.TabIndex = 5;
 			// 
 			// tvFolders
 			// 
 			this.tvFolders.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tvFolders.Location = new System.Drawing.Point( 0, 0 );
+			this.tvFolders.Location = new System.Drawing.Point(0, 0);
 			this.tvFolders.Name = "tvFolders";
 			this.tvFolders.PathSeparator = "/";
 			this.tvFolders.ShowRootLines = false;
-			this.tvFolders.Size = new System.Drawing.Size( 165, 412 );
+			this.tvFolders.Size = new System.Drawing.Size(165, 412);
 			this.tvFolders.TabIndex = 4;
-			this.tvFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler( this.tvFolders_AfterSelect );
+			this.tvFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvFolders_AfterSelect);
+			// 
+			// poggers
+			// 
+			this.poggers.Location = new System.Drawing.Point(0, 384);
+			this.poggers.Name = "poggers";
+			this.poggers.Size = new System.Drawing.Size(383, 28);
+			this.poggers.Step = 1;
+			this.poggers.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+			this.poggers.TabIndex = 1;
+			this.poggers.Visible = false;
 			// 
 			// pnlFileOpsToolbar
 			// 
-			this.pnlFileOpsToolbar.Controls.Add( this.tsFileOperations );
+			this.pnlFileOpsToolbar.Controls.Add(this.tsFileOperations);
 			this.pnlFileOpsToolbar.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlFileOpsToolbar.Location = new System.Drawing.Point( 0, 0 );
+			this.pnlFileOpsToolbar.Location = new System.Drawing.Point(0, 0);
 			this.pnlFileOpsToolbar.Name = "pnlFileOpsToolbar";
-			this.pnlFileOpsToolbar.Size = new System.Drawing.Size( 552, 26 );
+			this.pnlFileOpsToolbar.Size = new System.Drawing.Size(552, 26);
 			this.pnlFileOpsToolbar.TabIndex = 0;
 			// 
 			// ssStatus
 			// 
-			this.ssStatus.Items.AddRange( new System.Windows.Forms.ToolStripItem[] {
-			this.tsslStatus} );
+			this.ssStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsslStatus});
 			this.ssStatus.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-			this.ssStatus.Location = new System.Drawing.Point( 0, 438 );
+			this.ssStatus.Location = new System.Drawing.Point(0, 438);
 			this.ssStatus.Name = "ssStatus";
-			this.ssStatus.Size = new System.Drawing.Size( 552, 5 );
+			this.ssStatus.Size = new System.Drawing.Size(552, 5);
 			this.ssStatus.SizingGrip = false;
 			this.ssStatus.TabIndex = 3;
 			// 
 			// tsslStatus
 			// 
 			this.tsslStatus.Name = "tsslStatus";
-			this.tsslStatus.Size = new System.Drawing.Size( 0, 0 );
+			this.tsslStatus.Size = new System.Drawing.Size(0, 0);
 			// 
 			// pnlForm
 			// 
-			this.pnlForm.Controls.Add( this.pnlLeftSide );
-			this.pnlForm.Controls.Add( this.pnlRightSide );
+			this.pnlForm.Controls.Add(this.pnlLeftSide);
+			this.pnlForm.Controls.Add(this.pnlRightSide);
 			this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlForm.Location = new System.Drawing.Point( 0, 25 );
+			this.pnlForm.Location = new System.Drawing.Point(0, 25);
 			this.pnlForm.Name = "pnlForm";
-			this.pnlForm.Size = new System.Drawing.Size( 759, 443 );
+			this.pnlForm.Size = new System.Drawing.Size(759, 443);
 			this.pnlForm.TabIndex = 12;
 			// 
 			// pnlRightSide
 			// 
-			this.pnlRightSide.Controls.Add( this.txtMetadataDescription );
-			this.pnlRightSide.Controls.Add( this.tsMetadata );
-			this.pnlRightSide.Controls.Add( this.lblDescription );
-			this.pnlRightSide.Controls.Add( this.cmbMetadataTag1 );
-			this.pnlRightSide.Controls.Add( this.cmbMetadataTag2 );
-			this.pnlRightSide.Controls.Add( this.lblTags );
-			this.pnlRightSide.Controls.Add( this.cmbMetadataType );
-			this.pnlRightSide.Controls.Add( this.lblType );
-			this.pnlRightSide.Controls.Add( this.txtMetadataTitle );
-			this.pnlRightSide.Controls.Add( this.lblTitle );
+			this.pnlRightSide.Controls.Add(this.txtMetadataDescription);
+			this.pnlRightSide.Controls.Add(this.tsMetadata);
+			this.pnlRightSide.Controls.Add(this.lblDescription);
+			this.pnlRightSide.Controls.Add(this.cmbMetadataTag1);
+			this.pnlRightSide.Controls.Add(this.cmbMetadataTag2);
+			this.pnlRightSide.Controls.Add(this.lblTags);
+			this.pnlRightSide.Controls.Add(this.cmbMetadataType);
+			this.pnlRightSide.Controls.Add(this.lblType);
+			this.pnlRightSide.Controls.Add(this.txtMetadataTitle);
+			this.pnlRightSide.Controls.Add(this.lblTitle);
 			this.pnlRightSide.Dock = System.Windows.Forms.DockStyle.Right;
-			this.pnlRightSide.Location = new System.Drawing.Point( 552, 0 );
+			this.pnlRightSide.Location = new System.Drawing.Point(552, 0);
 			this.pnlRightSide.Name = "pnlRightSide";
-			this.pnlRightSide.Size = new System.Drawing.Size( 207, 443 );
+			this.pnlRightSide.Size = new System.Drawing.Size(207, 443);
 			this.pnlRightSide.TabIndex = 12;
 			// 
 			// txtMetadataDescription
 			// 
 			this.txtMetadataDescription.AcceptsTab = true;
 			this.txtMetadataDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtMetadataDescription.Location = new System.Drawing.Point( 20, 153 );
+			this.txtMetadataDescription.Location = new System.Drawing.Point(20, 153);
 			this.txtMetadataDescription.Multiline = true;
 			this.txtMetadataDescription.Name = "txtMetadataDescription";
 			this.txtMetadataDescription.ReadOnly = true;
 			this.txtMetadataDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.txtMetadataDescription.Size = new System.Drawing.Size( 184, 278 );
+			this.txtMetadataDescription.Size = new System.Drawing.Size(184, 278);
 			this.txtMetadataDescription.TabIndex = 7;
 			// 
 			// tsMetadata
 			// 
 			this.tsMetadata.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-			this.tsMetadata.Items.AddRange( new System.Windows.Forms.ToolStripItem[] {
-			this.tsbUpdateMetadata,
-			this.tsbDiscardMetadataChanges} );
-			this.tsMetadata.Location = new System.Drawing.Point( 0, 0 );
+			this.tsMetadata.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbUpdateMetadata,
+            this.tsbDiscardMetadataChanges});
+			this.tsMetadata.Location = new System.Drawing.Point(0, 0);
 			this.tsMetadata.Name = "tsMetadata";
-			this.tsMetadata.Size = new System.Drawing.Size( 207, 25 );
+			this.tsMetadata.Size = new System.Drawing.Size(207, 25);
 			this.tsMetadata.TabIndex = 10;
 			// 
 			// tsbUpdateMetadata
@@ -459,9 +471,9 @@ namespace LambdaGMad
 			this.tsbUpdateMetadata.Image = global::LambdaGMad.Properties.Resources.metadata;
 			this.tsbUpdateMetadata.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbUpdateMetadata.Name = "tsbUpdateMetadata";
-			this.tsbUpdateMetadata.Size = new System.Drawing.Size( 118, 22 );
+			this.tsbUpdateMetadata.Size = new System.Drawing.Size(118, 22);
 			this.tsbUpdateMetadata.Text = "Update metadata";
-			this.tsbUpdateMetadata.Click += new System.EventHandler( this.tsbUpdateMetadata_Click );
+			this.tsbUpdateMetadata.Click += new System.EventHandler(this.tsbUpdateMetadata_Click);
 			// 
 			// tsbDiscardMetadataChanges
 			// 
@@ -469,18 +481,18 @@ namespace LambdaGMad
 			this.tsbDiscardMetadataChanges.Image = global::LambdaGMad.Properties.Resources.discard;
 			this.tsbDiscardMetadataChanges.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbDiscardMetadataChanges.Name = "tsbDiscardMetadataChanges";
-			this.tsbDiscardMetadataChanges.Size = new System.Drawing.Size( 66, 22 );
+			this.tsbDiscardMetadataChanges.Size = new System.Drawing.Size(66, 22);
 			this.tsbDiscardMetadataChanges.Text = "Discard";
 			this.tsbDiscardMetadataChanges.ToolTipText = "Discard metadata changes";
 			this.tsbDiscardMetadataChanges.Visible = false;
-			this.tsbDiscardMetadataChanges.Click += new System.EventHandler( this.tsbDiscardMetadataChanges_Click );
+			this.tsbDiscardMetadataChanges.Click += new System.EventHandler(this.tsbDiscardMetadataChanges_Click);
 			// 
 			// lblDescription
 			// 
 			this.lblDescription.AutoSize = true;
-			this.lblDescription.Location = new System.Drawing.Point( 6, 136 );
+			this.lblDescription.Location = new System.Drawing.Point(6, 136);
 			this.lblDescription.Name = "lblDescription";
-			this.lblDescription.Size = new System.Drawing.Size( 63, 13 );
+			this.lblDescription.Size = new System.Drawing.Size(63, 13);
 			this.lblDescription.TabIndex = 6;
 			this.lblDescription.Text = "Description:";
 			// 
@@ -489,9 +501,9 @@ namespace LambdaGMad
 			this.cmbMetadataTag1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbMetadataTag1.Enabled = false;
 			this.cmbMetadataTag1.FormattingEnabled = true;
-			this.cmbMetadataTag1.Location = new System.Drawing.Point( 20, 113 );
+			this.cmbMetadataTag1.Location = new System.Drawing.Point(20, 113);
 			this.cmbMetadataTag1.Name = "cmbMetadataTag1";
-			this.cmbMetadataTag1.Size = new System.Drawing.Size( 92, 21 );
+			this.cmbMetadataTag1.Size = new System.Drawing.Size(92, 21);
 			this.cmbMetadataTag1.Sorted = true;
 			this.cmbMetadataTag1.TabIndex = 12;
 			// 
@@ -500,18 +512,18 @@ namespace LambdaGMad
 			this.cmbMetadataTag2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbMetadataTag2.Enabled = false;
 			this.cmbMetadataTag2.FormattingEnabled = true;
-			this.cmbMetadataTag2.Location = new System.Drawing.Point( 112, 113 );
+			this.cmbMetadataTag2.Location = new System.Drawing.Point(112, 113);
 			this.cmbMetadataTag2.Name = "cmbMetadataTag2";
-			this.cmbMetadataTag2.Size = new System.Drawing.Size( 92, 21 );
+			this.cmbMetadataTag2.Size = new System.Drawing.Size(92, 21);
 			this.cmbMetadataTag2.Sorted = true;
 			this.cmbMetadataTag2.TabIndex = 13;
 			// 
 			// lblTags
 			// 
 			this.lblTags.AutoSize = true;
-			this.lblTags.Location = new System.Drawing.Point( 6, 97 );
+			this.lblTags.Location = new System.Drawing.Point(6, 97);
 			this.lblTags.Name = "lblTags";
-			this.lblTags.Size = new System.Drawing.Size( 34, 13 );
+			this.lblTags.Size = new System.Drawing.Size(34, 13);
 			this.lblTags.TabIndex = 4;
 			this.lblTags.Text = "Tags:";
 			// 
@@ -520,50 +532,50 @@ namespace LambdaGMad
 			this.cmbMetadataType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbMetadataType.Enabled = false;
 			this.cmbMetadataType.FormattingEnabled = true;
-			this.cmbMetadataType.Location = new System.Drawing.Point( 20, 73 );
+			this.cmbMetadataType.Location = new System.Drawing.Point(20, 73);
 			this.cmbMetadataType.Name = "cmbMetadataType";
-			this.cmbMetadataType.Size = new System.Drawing.Size( 184, 21 );
+			this.cmbMetadataType.Size = new System.Drawing.Size(184, 21);
 			this.cmbMetadataType.Sorted = true;
 			this.cmbMetadataType.TabIndex = 11;
 			// 
 			// lblType
 			// 
 			this.lblType.AutoSize = true;
-			this.lblType.Location = new System.Drawing.Point( 6, 58 );
+			this.lblType.Location = new System.Drawing.Point(6, 58);
 			this.lblType.Name = "lblType";
-			this.lblType.Size = new System.Drawing.Size( 34, 13 );
+			this.lblType.Size = new System.Drawing.Size(34, 13);
 			this.lblType.TabIndex = 2;
 			this.lblType.Text = "Type:";
 			// 
 			// txtMetadataTitle
 			// 
 			this.txtMetadataTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.txtMetadataTitle.Location = new System.Drawing.Point( 20, 42 );
+			this.txtMetadataTitle.Location = new System.Drawing.Point(20, 42);
 			this.txtMetadataTitle.Name = "txtMetadataTitle";
 			this.txtMetadataTitle.ReadOnly = true;
-			this.txtMetadataTitle.Size = new System.Drawing.Size( 184, 13 );
+			this.txtMetadataTitle.Size = new System.Drawing.Size(184, 13);
 			this.txtMetadataTitle.TabIndex = 1;
 			// 
 			// lblTitle
 			// 
 			this.lblTitle.AutoSize = true;
-			this.lblTitle.Location = new System.Drawing.Point( 6, 26 );
+			this.lblTitle.Location = new System.Drawing.Point(6, 26);
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.Size = new System.Drawing.Size( 30, 13 );
+			this.lblTitle.Size = new System.Drawing.Size(30, 13);
 			this.lblTitle.TabIndex = 0;
 			this.lblTitle.Text = "Title:";
 			// 
 			// tsToolbar
 			// 
 			this.tsToolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-			this.tsToolbar.Items.AddRange( new System.Windows.Forms.ToolStripItem[] {
-			this.tsbCreateAddon,
-			this.tsbOpenAddon,
-			this.tsbSaveAddon,
-			this.tssAddonSeparator} );
-			this.tsToolbar.Location = new System.Drawing.Point( 0, 0 );
+			this.tsToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbCreateAddon,
+            this.tsbOpenAddon,
+            this.tsbSaveAddon,
+            this.tssAddonSeparator});
+			this.tsToolbar.Location = new System.Drawing.Point(0, 0);
 			this.tsToolbar.Name = "tsToolbar";
-			this.tsToolbar.Size = new System.Drawing.Size( 759, 25 );
+			this.tsToolbar.Size = new System.Drawing.Size(759, 25);
 			this.tsToolbar.TabIndex = 13;
 			// 
 			// tsbCreateAddon
@@ -572,9 +584,9 @@ namespace LambdaGMad
 			this.tsbCreateAddon.Image = global::LambdaGMad.Properties.Resources.newaddon;
 			this.tsbCreateAddon.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbCreateAddon.Name = "tsbCreateAddon";
-			this.tsbCreateAddon.Size = new System.Drawing.Size( 86, 22 );
+			this.tsbCreateAddon.Size = new System.Drawing.Size(86, 22);
 			this.tsbCreateAddon.Text = "Create new";
-			this.tsbCreateAddon.Click += new System.EventHandler( this.tsbCreateAddon_Click );
+			this.tsbCreateAddon.Click += new System.EventHandler(this.tsbCreateAddon_Click);
 			// 
 			// tsbOpenAddon
 			// 
@@ -582,9 +594,9 @@ namespace LambdaGMad
 			this.tsbOpenAddon.Image = global::LambdaGMad.Properties.Resources.open;
 			this.tsbOpenAddon.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbOpenAddon.Name = "tsbOpenAddon";
-			this.tsbOpenAddon.Size = new System.Drawing.Size( 56, 22 );
+			this.tsbOpenAddon.Size = new System.Drawing.Size(56, 22);
 			this.tsbOpenAddon.Text = "Open";
-			this.tsbOpenAddon.Click += new System.EventHandler( this.tsbOpenAddon_Click );
+			this.tsbOpenAddon.Click += new System.EventHandler(this.tsbOpenAddon_Click);
 			// 
 			// tsbSaveAddon
 			// 
@@ -593,14 +605,14 @@ namespace LambdaGMad
 			this.tsbSaveAddon.Image = global::LambdaGMad.Properties.Resources.save;
 			this.tsbSaveAddon.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.tsbSaveAddon.Name = "tsbSaveAddon";
-			this.tsbSaveAddon.Size = new System.Drawing.Size( 51, 22 );
+			this.tsbSaveAddon.Size = new System.Drawing.Size(51, 22);
 			this.tsbSaveAddon.Text = "Save";
-			this.tsbSaveAddon.Click += new System.EventHandler( this.tsbSaveAddon_Click );
+			this.tsbSaveAddon.Click += new System.EventHandler(this.tsbSaveAddon_Click);
 			// 
 			// tssAddonSeparator
 			// 
 			this.tssAddonSeparator.Name = "tssAddonSeparator";
-			this.tssAddonSeparator.Size = new System.Drawing.Size( 6, 25 );
+			this.tssAddonSeparator.Size = new System.Drawing.Size(6, 25);
 			// 
 			// ofdAddFile
 			// 
@@ -619,118 +631,118 @@ namespace LambdaGMad
 			// tssExportSeparator
 			// 
 			this.tssExportSeparator.Name = "tssExportSeparator";
-			this.tssExportSeparator.Size = new System.Drawing.Size( 140, 6 );
+			this.tssExportSeparator.Size = new System.Drawing.Size(140, 6);
 			// 
 			// cmsFileEntry
 			// 
-			this.cmsFileEntry.Items.AddRange( new System.Windows.Forms.ToolStripItem[] {
-			this.tsmFileShellExec,
-			this.tsmFileExtract,
-			this.tsmFileRemove,
-			this.tssExportSeparator,
-			this.tsmFileExportTo,
-			this.tsmFilePull,
-			this.tsmFileOpenExport,
-			this.tsmFileDropExport} );
+			this.cmsFileEntry.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmFileShellExec,
+            this.tsmFileExtract,
+            this.tsmFileRemove,
+            this.tssExportSeparator,
+            this.tsmFileExportTo,
+            this.tsmFilePull,
+            this.tsmFileOpenExport,
+            this.tsmFileDropExport});
 			this.cmsFileEntry.Name = "cmsFileEntry";
-			this.cmsFileEntry.Size = new System.Drawing.Size( 144, 164 );
+			this.cmsFileEntry.Size = new System.Drawing.Size(144, 164);
 			// 
 			// tsmFileShellExec
 			// 
 			this.tsmFileShellExec.Image = global::LambdaGMad.Properties.Resources.execute;
 			this.tsmFileShellExec.Name = "tsmFileShellExec";
-			this.tsmFileShellExec.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFileShellExec.Size = new System.Drawing.Size(143, 22);
 			this.tsmFileShellExec.Text = "Shell execute";
 			this.tsmFileShellExec.ToolTipText = "Run the selected file like it was opened in Explorer";
-			this.tsmFileShellExec.Click += new System.EventHandler( this.tsmFileShellExec_Click );
+			this.tsmFileShellExec.Click += new System.EventHandler(this.tsmFileShellExec_Click);
 			// 
 			// tsmFileExtract
 			// 
 			this.tsmFileExtract.Image = global::LambdaGMad.Properties.Resources.extract;
 			this.tsmFileExtract.Name = "tsmFileExtract";
-			this.tsmFileExtract.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFileExtract.Size = new System.Drawing.Size(143, 22);
 			this.tsmFileExtract.Text = "Extract";
 			this.tsmFileExtract.ToolTipText = "Save the selected file somewhere on your computer";
-			this.tsmFileExtract.Click += new System.EventHandler( this.tsmFileExtract_Click );
+			this.tsmFileExtract.Click += new System.EventHandler(this.tsmFileExtract_Click);
 			// 
 			// tsmFileRemove
 			// 
 			this.tsmFileRemove.Image = global::LambdaGMad.Properties.Resources.drop;
 			this.tsmFileRemove.Name = "tsmFileRemove";
-			this.tsmFileRemove.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFileRemove.Size = new System.Drawing.Size(143, 22);
 			this.tsmFileRemove.Text = "Remove";
-			this.tsmFileRemove.Click += new System.EventHandler( this.tsmFileRemove_Click );
+			this.tsmFileRemove.Click += new System.EventHandler(this.tsmFileRemove_Click);
 			// 
 			// tsmFileExportTo
 			// 
 			this.tsmFileExportTo.Image = global::LambdaGMad.Properties.Resources.export;
 			this.tsmFileExportTo.Name = "tsmFileExportTo";
-			this.tsmFileExportTo.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFileExportTo.Size = new System.Drawing.Size(143, 22);
 			this.tsmFileExportTo.Text = "Export to...";
 			this.tsmFileExportTo.ToolTipText = "Export the selected file to somewhere on your computer and set up a realtime chan" +
-	"ge-watch. Changed files will be purple.";
-			this.tsmFileExportTo.Click += new System.EventHandler( this.tsmFileExportTo_Click );
+    "ge-watch. Changed files will be purple.";
+			this.tsmFileExportTo.Click += new System.EventHandler(this.tsmFileExportTo_Click);
 			// 
 			// tsmFilePull
 			// 
 			this.tsmFilePull.Image = global::LambdaGMad.Properties.Resources.pull;
 			this.tsmFilePull.Name = "tsmFilePull";
-			this.tsmFilePull.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFilePull.Size = new System.Drawing.Size(143, 22);
 			this.tsmFilePull.Text = "Update";
 			this.tsmFilePull.ToolTipText = "Update this file with the changes from the exported file on your computer";
-			this.tsmFilePull.Click += new System.EventHandler( this.tsmFilePull_Click );
+			this.tsmFilePull.Click += new System.EventHandler(this.tsmFilePull_Click);
 			// 
 			// tsmFileOpenExport
 			// 
 			this.tsmFileOpenExport.Image = global::LambdaGMad.Properties.Resources.open_export;
 			this.tsmFileOpenExport.Name = "tsmFileOpenExport";
-			this.tsmFileOpenExport.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFileOpenExport.Size = new System.Drawing.Size(143, 22);
 			this.tsmFileOpenExport.Text = "Open export";
 			this.tsmFileOpenExport.ToolTipText = "Opens the exported file from your filesystem";
-			this.tsmFileOpenExport.Click += new System.EventHandler( this.tsmFileOpenExport_Click );
+			this.tsmFileOpenExport.Click += new System.EventHandler(this.tsmFileOpenExport_Click);
 			// 
 			// tsmFileDropExport
 			// 
 			this.tsmFileDropExport.Image = global::LambdaGMad.Properties.Resources.drop_export;
 			this.tsmFileDropExport.Name = "tsmFileDropExport";
-			this.tsmFileDropExport.Size = new System.Drawing.Size( 143, 22 );
+			this.tsmFileDropExport.Size = new System.Drawing.Size(143, 22);
 			this.tsmFileDropExport.Text = "Drop export";
 			this.tsmFileDropExport.ToolTipText = "Delete the exported file from your computer";
-			this.tsmFileDropExport.Click += new System.EventHandler( this.tsmFileDropExport_Click );
+			this.tsmFileDropExport.Click += new System.EventHandler(this.tsmFileDropExport_Click);
 			// 
 			// Main
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF( 6F, 13F );
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size( 759, 468 );
-			this.Controls.Add( this.pnlForm );
-			this.Controls.Add( this.tsToolbar );
+			this.ClientSize = new System.Drawing.Size(759, 468);
+			this.Controls.Add(this.pnlForm);
+			this.Controls.Add(this.tsToolbar);
 			this.Name = "Main";
 			this.Text = "LambdaGMad";
-			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler( this.Main_FormClosing );
-			this.Load += new System.EventHandler( this.Main_Load );
-			this.Resize += new System.EventHandler( this.Main_Resize );
-			this.tsFileOperations.ResumeLayout( false );
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+			this.Load += new System.EventHandler(this.Main_Load);
+			this.Resize += new System.EventHandler(this.Main_Resize);
+			this.tsFileOperations.ResumeLayout(false);
 			this.tsFileOperations.PerformLayout();
-			this.pnlLeftSide.ResumeLayout( false );
+			this.pnlLeftSide.ResumeLayout(false);
 			this.pnlLeftSide.PerformLayout();
-			this.spcFoldersAndFiles.Panel1.ResumeLayout( false );
-			this.spcFoldersAndFiles.Panel2.ResumeLayout( false );
-			( ( System.ComponentModel.ISupportInitialize ) ( this.spcFoldersAndFiles ) ).EndInit();
-			this.spcFoldersAndFiles.ResumeLayout( false );
-			this.pnlFileOpsToolbar.ResumeLayout( false );
+			this.spcFoldersAndFiles.Panel1.ResumeLayout(false);
+			this.spcFoldersAndFiles.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.spcFoldersAndFiles)).EndInit();
+			this.spcFoldersAndFiles.ResumeLayout(false);
+			this.pnlFileOpsToolbar.ResumeLayout(false);
 			this.pnlFileOpsToolbar.PerformLayout();
-			this.ssStatus.ResumeLayout( false );
+			this.ssStatus.ResumeLayout(false);
 			this.ssStatus.PerformLayout();
-			this.pnlForm.ResumeLayout( false );
-			this.pnlRightSide.ResumeLayout( false );
+			this.pnlForm.ResumeLayout(false);
+			this.pnlRightSide.ResumeLayout(false);
 			this.pnlRightSide.PerformLayout();
-			this.tsMetadata.ResumeLayout( false );
+			this.tsMetadata.ResumeLayout(false);
 			this.tsMetadata.PerformLayout();
-			this.tsToolbar.ResumeLayout( false );
+			this.tsToolbar.ResumeLayout(false);
 			this.tsToolbar.PerformLayout();
-			this.cmsFileEntry.ResumeLayout( false );
-			this.ResumeLayout( false );
+			this.cmsFileEntry.ResumeLayout(false);
+			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
@@ -795,10 +807,6 @@ namespace LambdaGMad
 		private System.Windows.Forms.ToolStripMenuItem tsmiViewShowFolderTree;
 		private System.Windows.Forms.ToolStripMenuItem tsmiViewShowAllFiles;
 		private System.Windows.Forms.ToolStripMenuItem tsmFileOpenExport;
-
-
-
-
-
+		private System.Windows.Forms.ProgressBar poggers;
 	}
 }

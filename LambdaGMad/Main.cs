@@ -1895,9 +1895,7 @@ namespace LambdaGMad
 					else if ( ( FileEntryType ) lstFiles.FocusedItem.Tag == FileEntryType.Subfolder )
 					{
 						// Extracting a subfolder.
-						List<string> files = AddonHandle.OpenAddon.Files
-							.Where( f => f.Path.StartsWith( lstFiles.FocusedItem.Name ) ).Select( f => f.Path ).ToList();
-
+						List<string> files = AddonHandle.OpenAddon.Files.Where( f => f.Path.StartsWith( lstFiles.FocusedItem.Name ) ).Select( f => f.Path ).ToList();
 						if ( files.Count > 0 )
 						{
 							fbdFileExtractMulti.Description = "Extract " + lstFiles.FocusedItem.Name + "/ " +
@@ -1909,19 +1907,16 @@ namespace LambdaGMad
 							if ( save == DialogResult.OK )
 							{
 								string extractPath = fbdFileExtractMulti.SelectedPath;
-
 								List<string> failed_paths = new List<string>( files.Count );
-
+								poggers.Visible = true;
 								foreach ( string file in files )
 								{
-									string outpath = extractPath + Path.DirectorySeparatorChar + file.Substring( tvFolders.SelectedNode.Name.Length );
-
+									string outpath = extractPath + "/" + file;
 									try
 									{
 										// We might need to create the directory tree for the extract
 										if ( !Directory.Exists( Path.GetDirectoryName( outpath ) ) )
 											Directory.CreateDirectory( Path.GetDirectoryName( outpath ) );
-
 										AddonHandle.ExtractFile( file, outpath );
 									}
 									catch ( Exception ex )
@@ -1929,34 +1924,31 @@ namespace LambdaGMad
 										failed_paths.Add( file + ": " + ex.Message );
 										continue;
 									}
+									poggers.PerformStep();
 								}
 
+								poggers.Visible = false;
+
 								if ( failed_paths.Count == 0 )
+								{
 									UpdateStatus( "Extracted " + files.Count() + " files from " + lstFiles.FocusedItem.Name + "/ successfully" );
+									MessageBox.Show( "Extracted " + files.Count() + " files from " + lstFiles.FocusedItem.Name + "/ successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+								}
 								else if ( failed_paths.Count == 1 )
-									MessageBox.Show( "Failed to extract " + failed_paths[0], "Extract folder",
-										MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
+									MessageBox.Show( "Failed to extract " + failed_paths[0], "Extract folder", MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
 								else if ( failed_paths.Count > 1 )
 								{
-									DialogResult showFailedFiles = MessageBox.Show( Convert.ToString( failed_paths.Count ) +
-										" files failed to extract.\n\nShow a list of failures?", "Extract folder",
-										MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation );
-
+									DialogResult showFailedFiles = MessageBox.Show( Convert.ToString( failed_paths.Count ) + " files failed to extract.\n\nShow a list of failures?", "Extract folder", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation );
 									if ( showFailedFiles == DialogResult.Yes )
 									{
-										string temppath = ContentFile.GenerateExternalPath(
-												new Random().Next() + "_failedExtracts" ) + ".txt";
-
+										string temppath = ContentFile.GenerateExternalPath( new Random().Next() + "_failedExtracts" ) + ".txt";
 										try
 										{
-											File.WriteAllText( temppath,
-												"These files failed to extract:\r\n\r\n" +
-												String.Join( "\r\n", failed_paths.ToArray() ) );
+											File.WriteAllText( temppath, "These files failed to extract:\r\n\r\n" + string.Join( "\r\n", failed_paths.ToArray() ) );
 										}
 										catch ( Exception )
 										{
-											MessageBox.Show( "Can't show the list, an error happened generating it.", "Extract folder",
-												MessageBoxButtons.OK, MessageBoxIcon.Stop );
+											MessageBox.Show( "Can't show the list, an error happened generating it.", "Extract folder", MessageBoxButtons.OK, MessageBoxIcon.Stop );
 											return;
 										}
 
