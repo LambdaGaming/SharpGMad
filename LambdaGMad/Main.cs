@@ -2019,7 +2019,7 @@ namespace LambdaGMad
 					foreach ( string file in files )
 					{
 						// Conventional extraction of a file.
-						string outpath = extractPath + Path.DirectorySeparatorChar + Path.GetFileName( file );
+						string outpath = extractPath + "/" + file;
 
 						try
 						{
@@ -2035,8 +2035,7 @@ namespace LambdaGMad
 					foreach ( string folder in subfolders )
 					{
 						// First, build a list of files in the current folder
-						List<string> entriesInFolder = AddonHandle.OpenAddon.Files
-							.Where( f => f.Path.StartsWith( folder ) ).Select( f => f.Path ).ToList();
+						List<string> entriesInFolder = AddonHandle.OpenAddon.Files.Where( f => f.Path.StartsWith( folder ) ).Select( f => f.Path ).ToList();
 
 						foreach ( string entry in entriesInFolder )
 						{
@@ -2047,7 +2046,7 @@ namespace LambdaGMad
 							// when we only want to extract lua/ contents. Like so:
 							// extractPath/a.lua (a file in lua/)
 							// extractPath/lua/subfolder/subfolder/file.lua (a file in subfolder of lua/))
-							string outpath = extractPath + Path.DirectorySeparatorChar + entry.Substring( tvFolders.SelectedNode.Name.Length );
+							string outpath = extractPath + "/" + entry;
 
 							try
 							{
