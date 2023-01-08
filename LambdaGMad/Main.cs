@@ -777,6 +777,23 @@ namespace LambdaGMad
 
 			UpdateStatus( "Addon unloaded." );
 			this.Text = "LambdaGMad " + Program.PrettyVersion;
+			ClearTempFiles();
+		}
+
+		void ClearTempFiles()
+		{
+			try
+			{
+				string temppath = Path.GetTempPath() + "/lambdagmad";
+				foreach ( string file in Directory.GetFiles( temppath ) )
+				{
+					File.Delete( file );
+				}
+			}
+			catch
+			{
+				UpdateStatus( "Couldn't find any temp files to remove." );
+			}
 		}
 
 		// Dock the txtDescription text box.
@@ -2110,8 +2127,13 @@ namespace LambdaGMad
 						string temppath;
 						try
 						{
-							temppath = Path.GetTempPath() + "/" + Path.GetFileName( lstFiles.FocusedItem.Name );
+							string tempdir = Path.GetTempPath() + "/lambdagmad/";
+							if ( !Directory.Exists( tempdir ) )
+							{
+								Directory.CreateDirectory( tempdir );
+							}
 
+							temppath = tempdir + Path.GetFileName( lstFiles.FocusedItem.Name );
 							try
 							{
 								File.WriteAllBytes( temppath, AddonHandle.GetFile( lstFiles.FocusedItem.Name ).Content );

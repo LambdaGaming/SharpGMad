@@ -1660,8 +1660,13 @@ namespace LambdaGMad
 			string temppath;
 			try
 			{
-				temppath = Path.GetTempPath() + "/" + Path.GetFileName( path );
+				string tempdir = Path.GetTempPath() + "/lambdagmad/";
+				if ( !Directory.Exists( tempdir ) )
+				{
+					Directory.CreateDirectory( tempdir );
+				}
 
+				temppath = tempdir + Path.GetFileName( path );
 				try
 				{
 					File.WriteAllBytes( temppath, AddonHandle.GetFile( path ).Content );
