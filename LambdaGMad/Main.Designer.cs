@@ -718,6 +718,7 @@ namespace LambdaGMad
 			this.Controls.Add(this.pnlForm);
 			this.Controls.Add(this.tsToolbar);
 			this.Name = "Main";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "LambdaGMad";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
 			this.Load += new System.EventHandler(this.Main_Load);
