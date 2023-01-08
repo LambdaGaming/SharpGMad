@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-#if WINDOWS
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
-#endif
 
 namespace System
 {
@@ -112,7 +110,6 @@ namespace System.IO
 	}
 }
 
-#if WINDOWS
 namespace LambdaGMad
 {
     static class FileAssocation
@@ -286,4 +283,3 @@ namespace LambdaGMad
             );
     }
 }
-#endif

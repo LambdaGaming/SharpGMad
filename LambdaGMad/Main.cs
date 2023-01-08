@@ -493,10 +493,8 @@ namespace LambdaGMad
 			File = 0
 		}
 
-#if WINDOWS
         /// <summary>A list of file extensions previously checked by UpdateFileList() for icons and types</summary>
         private List<string> CheckedExtensions = new List<string>();
-#endif
 
 		/// <summary>
 		/// Updates the filelist (lstFiles) with the changes administered to the known files.
@@ -597,7 +595,7 @@ namespace LambdaGMad
 						item.ImageKey = "file";
 
 						string extensionNoDot = Path.GetExtension( cfile.Path ).TrimStart( '.' ).ToLowerInvariant();
-#if WINDOWS
+
                         // Try to get the file's icon and type name from the system if possible (and on Windows)
                         string iconAssocString = "assocIcon_" + extensionNoDot;
                         if (!CheckedExtensions.Contains(extensionNoDot))
@@ -636,7 +634,7 @@ namespace LambdaGMad
 
                         if (lstFiles.View != View.LargeIcon && !imgIconsSmall.Images.ContainsKey(iconAssocString))
                             item.ImageKey = "file";
-#endif
+
 						// Add subitems for Details view
 						ListViewItem.ListViewSubItem type = new ListViewItem.ListViewSubItem();
 
@@ -1511,11 +1509,6 @@ namespace LambdaGMad
 			{
 				UnloadAddon();
 			}
-
-#if MONO
-			// Mono tends not to hide the form when it is loaded from the realtime console with the "gui" command.
-			this.Hide();
-#endif
 		}
 
 		private void tsbCreateAddon_Click( object sender, EventArgs e )

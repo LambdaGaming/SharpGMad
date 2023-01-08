@@ -44,24 +44,14 @@ namespace LambdaGMad
 			{
 				if ( AddonHandle == null )
 				{
-#if WINDOWS
                     Console.Write("LambdaGMad> ");
-#endif
-#if MONO
-					Console.Write( "$ " );
-#endif
 				}
 				else if ( AddonHandle is RealtimeAddon )
 				{
 					Console.Write( Path.GetFileName( AddonHandle.AddonPath ) + ( Whitelist.Override ? "!" : null ) +
 						( AddonHandle.CanWrite ? null : " (read-only)" ) +
 						( AddonHandle.Modified ? "*" : null ) + ( AddonHandle.Pullable ? "!" : null ) );
-#if WINDOWS
                      Console.Write("> ");
-#endif
-#if MONO
-					Console.Write( "$ " );
-#endif
 				}
 
 				string input = Console.ReadLine();
@@ -506,12 +496,7 @@ namespace LambdaGMad
 							break;
 						}
 						break;
-#if MONO
-					case "ls":
-#endif
-#if WINDOWS
                     case "dir":
-#endif
 						try
 						{
 							IEnumerable<string> files = Directory.EnumerateFileSystemEntries( Directory.GetCurrentDirectory(),
@@ -654,12 +639,7 @@ namespace LambdaGMad
 
 						Console.WriteLine( "pwd                        Prints LambdaGMad's current working directory" );
 						Console.WriteLine( "cd <folder>                Changes the current working directory to <folder>" );
-#if MONO
-						Console.Write( "ls                         " );
-#endif
-#if WINDOWS
                         Console.Write("dir                        ");
-#endif
 						Console.WriteLine( "List all files in the current directory" );
 
 						if ( AddonHandle == null || ( AddonHandle is RealtimeAddon && !AddonHandle.Modified ) )

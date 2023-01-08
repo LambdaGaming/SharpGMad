@@ -1,8 +1,3 @@
-#if MONO
-using System.Collections.Generic;
-using System.Windows.Forms;
-#endif
-
 namespace LambdaGMad
 {
 	partial class Main
@@ -20,42 +15,6 @@ namespace LambdaGMad
 		{
 			if ( disposing && ( components != null ) )
 			{
-#if MONO
-				// There seems to be an error with how GDI+ disposes stuff related to resource bitmaps
-				// in these ToolStripItem (and derived) objects.
-				if ( cmsFileEntry != null && !cmsFileEntry.IsDisposed )
-				{
-					List<ToolStripItem> items = new List<ToolStripItem>( cmsFileEntry.Items.Count );
-
-					foreach ( ToolStripItem item in cmsFileEntry.Items )
-						items.Add( item );
-
-					foreach ( ToolStripItem item in items )
-						if ( item != null && !item.IsDisposed )
-							item.Dispose();
-
-					cmsFileEntry.Dispose();
-					components.Remove( cmsFileEntry );
-
-					items.Clear();
-				}
-
-				if ( tsddbViewOptions != null && tsddbViewOptions.HasDropDownItems && !tsddbViewOptions.IsDisposed )
-				{
-					List<ToolStripItem> items = new List<ToolStripItem>( tsddbViewOptions.DropDownItems.Count );
-
-					foreach ( ToolStripItem item in tsddbViewOptions.DropDownItems )
-						items.Add( item );
-
-					foreach ( ToolStripItem item in items )
-						if ( item != null && !item.IsDisposed )
-							item.Dispose();
-
-					tsddbViewOptions.Dispose();
-
-					items.Clear();
-				}
-#endif
 				components.Dispose();
 			}
 			base.Dispose( disposing );

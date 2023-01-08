@@ -11,13 +11,11 @@ namespace LambdaGMad
 	/// </summary>
 	class Program
 	{
-#if WINDOWS
         /// <summary>
         /// External method to find a pointer for an attached console window.
         /// </summary>
         [DllImport("kernel32.dll", EntryPoint = "GetConsoleWindow")]
         private static extern IntPtr _GetConsoleWindow();
-#endif
 
 		/// <summary>
 		/// The main entry point for the application.
@@ -46,7 +44,6 @@ namespace LambdaGMad
 			}
 			else
 			{
-#if WINDOWS
                 IntPtr consoleHandle = _GetConsoleWindow();
                 bool dontRestartMyself = consoleHandle == IntPtr.Zero;
 
@@ -69,14 +66,8 @@ namespace LambdaGMad
                         CreateNoWindow = true,
                         UseShellExecute = false,
                     });
-                }
-#endif
-
-#if MONO
-				Application.Run( new Main( args ) );
-#endif
+				}
 			}
-
 			return 0;
 		}
 
